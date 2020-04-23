@@ -4,8 +4,8 @@ import SubMenu from "../../SubMenu";
 class LS0401 extends React.Component {
   render() {
     return (
-      <div>
-        <SubMenu />
+      <div className="LS0401__screen">
+        <SubMenu title="Title" desc="Desc" detailDesc="DetailDesc Text" />
       </div>
     );
   }
