@@ -3,7 +3,7 @@ import React from "react";
 class LS0000 extends React.Component {
   render() {
     return (
-      <div>
+      <div className="LS0000__screen">
         <div>LS0000</div>
       </div>
     );
