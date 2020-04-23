@@ -9,9 +9,11 @@ class LS0101 extends React.Component {
           <br />
           SOFTWARE
         </div>
-        <div>비전</div>
-        <div>조직도</div>
-        <div>오시는 길</div>
+        <div>
+          <div>#비전</div>
+          <div>#조직도</div>
+          <div>#오시는 길</div>
+        </div>
       </div>
     );
   }
