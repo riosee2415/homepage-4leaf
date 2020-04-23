@@ -3,8 +3,15 @@ import React from "react";
 class LS0101 extends React.Component {
   render() {
     return (
-      <div>
-        <div>LS0101</div>
+      <div className="LS0101__screen">
+        <div>
+          4LEAF
+          <br />
+          SOFTWARE
+        </div>
+        <div>비전</div>
+        <div>조직도</div>
+        <div>오시는 길</div>
       </div>
     );
   }
