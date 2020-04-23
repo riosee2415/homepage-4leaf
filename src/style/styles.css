@@ -21,6 +21,17 @@ body {
   flex-direction: row;
 }
 
+.mainArea__main {
+  width: 100%;
+  background: linear-gradient(#000000, #222222);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+}
+
 .mainArea__col-1 {
   width: 50%;
   background: linear-gradient(#000000, #222222);

@@ -1,4 +1,11 @@
 @charset "utf-8";
 
 .subMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.subMenu__up {
+  display: flex;
+  flex-direction: row;
 }
