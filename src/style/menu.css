@@ -1,15 +1,27 @@
-.ma1__menu div {
-  font-weight: 600;
+@keyframes rota1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rota2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
 }
 
-#menu_button:checked ~ #menu {
-  right: 0;
+.ma1__menu div {
+  font-weight: 600;
 }
 
 #menu {
   position: fixed;
   top: 0;
-  right: -5920px;
   width: 100%;
   height: 100%;
   z-index: 99;
@@ -18,8 +30,8 @@
   transition: 0.8s;
 }
 
-.ma1__menu label#menu_button,
-.ma1__menu label#menu_close {
+.ma1__menu .openMenuBar,
+.ma1__menu .closeMenuBar {
   display: block;
   position: relative;
   cursor: pointer;
@@ -28,8 +40,13 @@
   z-index: 99;
   margin-right: 10px;
 }
+.ma1__menu .closeMenuBar {
+  margin-right: 0;
+  margin-top: 15px;
+}
 
-.ma1__menu label .line {
+.ma1__menu .openMenuBar .line,
+.ma1__menu .closeMenuBar .line {
   display: block;
   width: 30px;
   height: 3px;
@@ -44,7 +61,8 @@
   animation: line2 2s infinite;
 }
 
-.ma1__menu label .line2 {
+.ma1__menu .openMenuBar .line2,
+.ma1__menu .closeMenuBar .line2 {
   display: block;
   width: 20px;
   height: 3px;
@@ -59,40 +77,28 @@
   animation: line1 2s infinite;
 }
 
-#menu_close {
-  margin-top: 20px;
+.ma1__menu .closeMenuBar {
+  animation: rota1 1s forwards;
 }
 
-#menu_close .line {
+.ma1__menu .closeMenuBar.close {
+  animation: rota2 1s forwards;
+}
+
+.ma1__menu .closeMenuBar .line {
   animation: none;
 }
 
-#menu_button:checked ~ #menu_button .line:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-#menu_button:checked ~ #menu_button .line:nth-child(2) {
-  opacity: 0;
-}
-
-#menu_button:checked ~ #menu_button .line:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-#menu_close .line:nth-child(1) {
+.ma1__menu .closeMenuBar .line:nth-child(1) {
   transform: translateY(12px) rotate(45deg);
 }
 
-#menu_close .line2 {
+.ma1__menu .closeMenuBar .line2 {
   opacity: 0;
 }
 
-#menu_close .line:nth-child(3) {
+.ma1__menu .closeMenuBar .line:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
-}
-
-#menu_button {
-  display: none;
 }
 
 @keyframes line1 {
