@@ -1,0 +1,22 @@
+.LS0101__screen {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.LS0101_MainTitle {
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.LS0101__subMenu {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
