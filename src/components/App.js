@@ -10,17 +10,21 @@ import {
   RS010102,
   RS010103,
   LS0201,
+  LS020101,
+  LS020102,
   RS0201,
+  RS020101,
+  RS020102,
   LS0301,
   RS0301,
   LS0401,
   RS0401,
-  RS040101,
+  RS040101
 } from "./screens";
 
 class App extends React.Component {
   state = {
-    isMenuScreen: false,
+    isMenuScreen: false
   };
 
   render() {
@@ -43,6 +47,8 @@ class App extends React.Component {
                   <Route exact path="/intro/organization" component={LS0101} />
                   <Route exact path="/intro/directions" component={LS0101} />
                   <Route exact path="/software" component={LS0201} />
+                  <Route exact path="/software/product" component={LS020101} />
+                  <Route exact path="/software/solution" component={LS020102} />
                   <Route exact path="/community" component={LS0301} />
                   <Route exact path="/support" component={LS0401} />
                   <Route exact path="/support/online" component={LS0401} />
@@ -55,6 +61,8 @@ class App extends React.Component {
                 <Route exact path="/intro/organization" component={RS010102} />
                 <Route exact path="/intro/directions" component={RS010103} />
                 <Route exact path="/software" component={RS0201} />
+                <Route exact path="/software/product" component={RS020101} />
+                <Route exact path="/software/solution" component={RS020102} />
                 <Route exact path="/community" component={RS0301} />
                 <Route exact path="/support" component={RS0401} />
                 <Route exact path="/support/online" component={RS040101} />
@@ -74,19 +82,19 @@ class App extends React.Component {
     const { isMenuOpen } = this.state;
 
     this.setState({
-      isMenuOpen: !this.state.isMenuOpen,
+      isMenuOpen: !this.state.isMenuOpen
     });
   };
 
   _setMenuScreen = () => {
     this.setState({
-      isMenuScreen: true,
+      isMenuScreen: true
     });
   };
 
   _setMainScreen = () => {
     this.setState({
-      isMenuScreen: false,
+      isMenuScreen: false
     });
   };
 }
