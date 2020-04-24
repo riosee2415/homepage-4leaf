@@ -25,3 +25,8 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.LS0101__subMenu div a {
+  color: #fff;
+  text-decoration: none;
+}
