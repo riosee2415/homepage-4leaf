@@ -96,7 +96,8 @@ body {
 .rs__sub {
   width: 100%;
   height: 100%;
-  background: linear-gradient(#ffffff, rgb(117, 117, 117));
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
 }
 
 @media (max-width: 425px) {
