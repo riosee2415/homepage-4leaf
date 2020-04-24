@@ -1,22 +1,19 @@
 .ma1__menu {
-  margin: 10px 0px;
   width: 100%;
-  height: 50px;
+  height: 6vh;
   padding: 5px 0px;
+  z-index: 100;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  color: #fff;
   font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.ma1__menu__link {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
+.ma1__menu__list {
   color: #fff;
   font-size: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);

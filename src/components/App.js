@@ -23,42 +23,38 @@ class App extends React.Component {
     const { isMenuScreen } = this.state;
 
     return (
-      <div className="mainArea">
-        {isMenuScreen ? (
-          <>
-            <div className="mainArea__col-1 ma1">
-              <MenuBar
-                setMenuFunc={this._setMenuScreen}
-                setMainFunc={this._setMainScreen}
-              />
-
-              <div className="ma1__content">
-                <Route exact path="/" component={LS0000} />
-                <Route exact path="/intro" component={LS0101} />
-                <Route exact path="/software" component={LS0201} />
-                <Route exact path="/community" component={LS0301} />
-                <Route exact path="/support" component={LS0401} />
+      <>
+        <MenuBar
+          setMenuFunc={this._setMenuScreen}
+          setMainFunc={this._setMainScreen}
+        />
+        <div className="mainArea">
+          {isMenuScreen ? (
+            <>
+              <div className="mainArea__col-1 ma1">
+                <div className="ma1__content">
+                  <Route exact path="/" component={LS0000} />
+                  <Route exact path="/intro" component={LS0101} />
+                  <Route exact path="/software" component={LS0201} />
+                  <Route exact path="/community" component={LS0301} />
+                  <Route exact path="/support" component={LS0401} />
+                </div>
               </div>
-            </div>
-            <div className="mainArea__col-2">
-              <Route exact path="/" component={RS0000} />
-              <Route exact path="/intro" component={RS0101} />
-              <Route exact path="/software" component={RS0201} />
-              <Route exact path="/community" component={RS0301} />
-              <Route exact path="/support" component={RS0401} />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="mainArea__main">
-              <MenuBar
-                setMenuFunc={this._setMenuScreen}
-                setMainFunc={this._setMainScreen}
-              />
-            </div>
-          </>
-        )}
-      </div>
+              <div className="mainArea__col-2">
+                <Route exact path="/" component={RS0000} />
+                <Route exact path="/intro" component={RS0101} />
+                <Route exact path="/software" component={RS0201} />
+                <Route exact path="/community" component={RS0301} />
+                <Route exact path="/support" component={RS0401} />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="mainArea__main"></div>
+            </>
+          )}
+        </div>
+      </>
     );
   }
 
