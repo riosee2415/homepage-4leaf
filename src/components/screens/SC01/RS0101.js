@@ -2,27 +2,7 @@ import React from "react";
 
 class RS0101 extends React.Component {
   render() {
-    return (
-      <div className="RS0101__screen">
-        <div>
-          <div>#비전</div>
-          <div>
-            고객과 풍부한 소통, 끈끈한 연결을 통하여 생산성 증가와 더 나은
-            결과물을 창출하는 것에 초점을 두고 있습니다.
-            <br />
-            한번 더 눈이가는 매력적인 결과물을 제공하겠습니다.
-          </div>
-        </div>
-        <div>
-          <div>#조직도</div>
-          <div>🖼이미지를 넣을꺼에욤</div>
-        </div>
-        <div>
-          <div>#오시는 길</div>
-          <div>🚩지도를 넣을꺼에욤</div>
-        </div>
-      </div>
-    );
+    return <div className="RS0101__screen">about 4leaf_software ??</div>;
   }
 }
 

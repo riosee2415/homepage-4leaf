@@ -1,5 +1,5 @@
 import React from "react";
-import SubMenu from "../../SubMenu";
+import { Link } from "react-router-dom";
 
 class LS0101 extends React.Component {
   render() {
@@ -11,9 +11,15 @@ class LS0101 extends React.Component {
           SOFTWARE
         </div>
         <div className="LS0101__subMenu">
-          <SubMenu title="#비전" />
-          <SubMenu title="#조직도" />
-          <SubMenu title="#오시는 길" />
+          <div>
+            <Link to="/intro/vision">#비전</Link>
+          </div>
+          <div>
+            <Link to="/intro/organization">#비전</Link>
+          </div>
+          <div>
+            <Link to="/intro/directions">#비전</Link>
+          </div>
         </div>
       </div>
     );
