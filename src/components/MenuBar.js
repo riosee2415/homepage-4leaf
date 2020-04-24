@@ -16,12 +16,20 @@ class MenuBar extends React.Component {
           </div>
         </div>
         <input type="checkbox" id="menu_button" />
-        <label htmlFor="menu_button" id="menu_button">
+        <label
+          htmlFor="menu_button"
+          id="menu_button"
+          onClick={() => this._visibleMenuBar()}
+        >
           <span className="line"></span>
           <span className="line2"></span>
           <span className="line"></span>
         </label>
-        <div className="ma1__menu__link" id="menu">
+        <div
+          className="ma1__menu__link"
+          id="menu"
+          onClick={() => this._disableMenuBar()}
+        >
           <label htmlFor="menu_button" id="menu_close">
             <span className="line"></span>
             <span className="line2"></span>
@@ -45,6 +53,17 @@ class MenuBar extends React.Component {
       </div>
     );
   }
+
+  _visibleMenuBar = () => {
+    const menuDiv = document.getElementById("menu");
+    menuDiv.style.display = "none";
+    menuDiv.style.display = "block";
+  };
+
+  _disableMenuBar = () => {
+    const menuDiv = document.getElementById("menu");
+    menuDiv.style.display = "none";
+  };
 }
 
 export default MenuBar;
