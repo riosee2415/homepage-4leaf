@@ -17,7 +17,7 @@ class SubMenu extends React.Component {
             {this.props.detailDesc}
             <span className="subMenu__down__icon">
               <Link to="/support/online">
-                <ChevronRightIcon style={{ fontSize: 40 }} />
+                <ChevronRightIcon color="primary" style={{ fontSize: 40 }} />
               </Link>
             </span>
           </span>

@@ -61,6 +61,14 @@ class App extends React.Component {
     );
   }
 
+  _changeMenuBar = () => {
+    const { isMenuOpen } = this.state;
+
+    this.setState({
+      isMenuOpen: !this.state.isMenuOpen,
+    });
+  };
+
   _setMenuScreen = () => {
     this.setState({
       isMenuScreen: true,
