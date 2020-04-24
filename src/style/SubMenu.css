@@ -2,7 +2,7 @@
 
 @keyframes createAni {
   0% {
-    transform: translateX(-1000px);
+    transform: translateX(-500px);
     opacity: 0;
   }
   80% {
@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   margin: 40px 0px;
-  animation: createAni 1s forwards;
+  animation: createAni 2s forwards;
 }
 
 .subMenu__up {
