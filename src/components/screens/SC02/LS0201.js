@@ -5,14 +5,12 @@ const menuList = [
   {
     title: "제품",
     desc: "",
-    detailDesc:
-      ""
+    detailDesc: ""
   },
   {
     title: "솔루션",
     desc: "",
-    detailDesc:
-      "
+    detailDesc: ""
   }
 ];
 
