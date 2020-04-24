@@ -1,6 +1,6 @@
 import React from "react";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
-import CallMissedOutgoingIcon from "@material-ui/icons/CallMissedOutgoing";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 class SubMenu extends React.Component {
   render() {
@@ -14,8 +14,11 @@ class SubMenu extends React.Component {
         <div className="subMenu__down">
           <span>
             {this.props.detailDesc}
-            <span className="subMenu__down__icon">
-              <CallMissedOutgoingIcon style={{ fontSize: 40 }} />
+            <span
+              className="subMenu__down__icon"
+              onClick={() => alert("asdfasdf")}
+            >
+              <ChevronRightIcon style={{ fontSize: 40 }} />
             </span>
           </span>
         </div>
