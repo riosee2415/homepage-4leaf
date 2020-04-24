@@ -1,6 +1,7 @@
 import React from "react";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
-import CallMissedOutgoingIcon from "@material-ui/icons/CallMissedOutgoing";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import { Link } from "react-router-dom";
 
 class SubMenu extends React.Component {
   render() {
@@ -15,7 +16,9 @@ class SubMenu extends React.Component {
           <span>
             {this.props.detailDesc}
             <span className="subMenu__down__icon">
-              <CallMissedOutgoingIcon style={{ fontSize: 40 }} />
+              <Link to="/support/online">
+                <ChevronRightIcon style={{ fontSize: 40 }} />
+              </Link>
             </span>
           </span>
         </div>

@@ -7,7 +7,6 @@ class MenuBar extends React.Component {
   }
 
   render() {
-    console.log(this.props.setMenuFunc);
     return (
       <div className="ma1__menu">
         <div className="ma1__menu__logo">
