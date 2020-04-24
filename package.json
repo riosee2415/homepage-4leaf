@@ -8,6 +8,8 @@
     "build": "NODE_ENV=production webpack -p"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.9.1",
     "css-loader": "^3.5.2",
     "file-loader": "^6.0.0",
     "firebase-tools": "^8.1.1",
