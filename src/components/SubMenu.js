@@ -1,6 +1,7 @@
 import React from "react";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import { Link } from "react-router-dom";
 
 class SubMenu extends React.Component {
   render() {
@@ -14,11 +15,10 @@ class SubMenu extends React.Component {
         <div className="subMenu__down">
           <span>
             {this.props.detailDesc}
-            <span
-              className="subMenu__down__icon"
-              onClick={() => alert("asdfasdf")}
-            >
-              <ChevronRightIcon style={{ fontSize: 40 }} />
+            <span className="subMenu__down__icon">
+              <Link to="/support/online">
+                <ChevronRightIcon style={{ fontSize: 40 }} />
+              </Link>
             </span>
           </span>
         </div>

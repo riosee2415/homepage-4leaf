@@ -26,9 +26,10 @@ class LS0401 extends React.Component {
   render() {
     return (
       <div className="LS0401__screen">
-        {menuList.map((menu) => {
+        {menuList.map((menu, idx) => {
           return (
             <SubMenu
+              key={idx}
               title={menu.title}
               desc={menu.desc}
               detailDesc={menu.detailDesc}
