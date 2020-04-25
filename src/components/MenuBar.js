@@ -6,7 +6,7 @@ class MenuBar extends React.Component {
     isMenuOpen: false,
     openBarClassName: "openMenuBar",
     closeBarClassName: "closeMenuBar",
-    menuCloseClassName: "",
+    menuCloseClassName: "btn btn__ani",
   };
 
   constructor(props) {
@@ -24,7 +24,9 @@ class MenuBar extends React.Component {
       <div className="ma1__menu">
         <div className="ma1__menu__logo">
           <div onClick={() => this.props.setMainFunc()}>
-            <NavLink to="/">LOGO</NavLink>
+            <NavLink to="/">
+              <div className="logo"></div>
+            </NavLink>
           </div>
         </div>
         <div className={openBarClassName} onClick={() => this._visibleMenu()}>
@@ -52,25 +54,37 @@ class MenuBar extends React.Component {
                 className={menuCloseClassName}
                 onClick={() => this.props.setMenuFunc()}
               >
-                <NavLink to="/intro">회사소개</NavLink>
+                <NavLink to="/intro">
+                  <span className="ko">회사소개</span>
+                  <span className="en">Introduce</span>
+                </NavLink>
               </div>
               <div
                 className={menuCloseClassName}
                 onClick={() => this.props.setMenuFunc()}
               >
-                <NavLink to="/software">소프트웨어</NavLink>
+                <NavLink to="/software">
+                  <span className="ko">소프트웨어</span>
+                  <span className="en">Software</span>
+                </NavLink>
               </div>
               <div
                 className={menuCloseClassName}
                 onClick={() => this.props.setMenuFunc()}
               >
-                <NavLink to="/community">커뮤니티</NavLink>
+                <NavLink to="/community">
+                  <span className="ko">커뮤니티</span>
+                  <span className="en">Community</span>
+                </NavLink>
               </div>
               <div
                 className={menuCloseClassName}
                 onClick={() => this.props.setMenuFunc()}
               >
-                <NavLink to="/support">고객지원</NavLink>
+                <NavLink to="/support">
+                  <span className="ko">고객지원</span>
+                  <span className="en">Support</span>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -82,7 +96,7 @@ class MenuBar extends React.Component {
   _clickClose = () => {
     this.setState({
       openBarClassName: "openMenuBar",
-      menuCloseClassName: "close",
+      menuCloseClassName: "btn btn__ani close",
     });
   };
 
@@ -106,7 +120,7 @@ class MenuBar extends React.Component {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen,
       openBarClassName: "closeMenuBar",
-      menuCloseClassName: "",
+      menuCloseClassName: "btn btn__ani",
     });
   };
 }

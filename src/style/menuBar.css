@@ -13,6 +13,14 @@
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+.ma1__menu__logo .logo {
+  margin-left: 10px;
+  width: 100px;
+  height: 30px;
+  background-size: cover;
+  background-image: url("../assets/images/logo/4LEAF_LOGO_W.png");
+}
+
 .ma1__menu__list {
   color: #fff;
 }
@@ -21,18 +29,69 @@
   font-size: 18px;
   margin: 20px;
   cursor: pointer;
+  color: rgb(255, 184, 52);
+}
+
+.ma1__menu__link div a {
+  display: block;
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+}
+
+.ma1__menu__link div.btn:before,
+.ma1__menu__link div.btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: currentColor;
+  transition: 0.3s ease-in-out;
+}
+
+.ma1__menu__link div.btn__ani:after {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.ma1__menu__link div.btn__ani:before,
+.ma1__menu__link div.btn__ani:after {
+  width: 0;
+  height: 2px;
+}
+
+.ma1__menu__link div.btn__ani:hover:before,
+.ma1__menu__link div.btn__ani:hover:after {
+  width: 100%;
+}
+
+.ma1__menu__link div .en {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  font-size: 13px;
+}
+
+.ma1__menu__link div a:hover .en {
+  transform: translateX(140px);
+  opacity: 1;
 }
 
 .menu__link__list {
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.menu__link__list.close {
+.ma1__menu__link.close {
   animation: 0.5s opacity forwards;
 }
 
