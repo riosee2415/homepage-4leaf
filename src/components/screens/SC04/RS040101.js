@@ -11,13 +11,18 @@ class RS040101 extends React.Component {
 
     return (
       <div className="RS040101__screen">
-        <Button
-          variant={software ? "contained" : "outlined"}
-          color={software ? "primary" : "default"}
-          onClick={() => this._changeSoftware()}
-        >
-          소프트웨어 문의
-        </Button>
+        <div className="back">
+          <div>dlkasdf</div>
+          <div>dlkasdf</div>
+          <div>dlkasdf</div>
+          <div>dlkasdf</div>
+
+          <div className="textBox">
+            <div>tettet</div>
+            <div>tetete</div>
+            <div>tetete</div>
+          </div>
+        </div>
       </div>
     );
   }
