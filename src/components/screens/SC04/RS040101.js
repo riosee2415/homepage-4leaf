@@ -1,4 +1,6 @@
 import React from "react";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 class RS040101 extends React.Component {
   state = {
@@ -9,6 +11,29 @@ class RS040101 extends React.Component {
     sendBtnClassName: "sendDataBtn",
     customerEmail: "",
     costomerDesc: "",
+  };
+
+  _sendConfirm = () => {
+    const { customerEmail, costomerDesc } = this.state;
+
+    if (customerEmail.length < 1 || costomerDesc < 1) {
+      return;
+    }
+
+    confirmAlert({
+      title: "담당자에게 문의내용을 전송하시겠습니까?",
+      message: "전송된 내용은 수정할 수 없습니다.",
+      buttons: [
+        {
+          label: "예",
+          onClick: () => this._sendDataBtnHandler(),
+        },
+        {
+          label: "아니오",
+          onClick: () => {},
+        },
+      ],
+    });
   };
 
   render() {
@@ -106,7 +131,7 @@ class RS040101 extends React.Component {
           <div className="rsb__contain">
             <button
               className={sendBtnClassName}
-              onClick={() => this._sendDataBtnHandler()}
+              onClick={() => this._sendConfirm()}
             >
               문의내용 전송하기
             </button>
@@ -123,15 +148,37 @@ class RS040101 extends React.Component {
   };
 
   _sendDataBtnHandler = () => {
-    const { customerEmail, costomerDesc } = this.state;
-
-    console.log(customerEmail, costomerDesc);
+    const {
+      customerEmail,
+      costomerDesc,
+      isSoftware,
+      isCooper,
+      isRepair,
+      isHowUse,
+    } = this.state;
 
     document.getElementById("customerEmail-js").value = "";
     document.getElementById("costomerDesc-js").value = "";
 
+    const sendData = {
+      customerEmail,
+      costomerDesc,
+      isSoftware,
+      isCooper,
+      isRepair,
+      isHowUse,
+    };
+
+    console.log(sendData);
+
     this.setState({
       sendBtnClassName: "sendDataBtnClick",
+      customerEmail: "",
+      costomerDesc: "",
+      isSoftware: false,
+      isCooper: false,
+      isRepair: false,
+      isHowUse: false,
     });
 
     setTimeout(() => {
