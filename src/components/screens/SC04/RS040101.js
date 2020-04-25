@@ -1,37 +1,175 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 
 class RS040101 extends React.Component {
   state = {
-    software: false,
+    isSoftware: false,
+    isCooper: false,
+    isRepair: false,
+    isHowUse: false,
+    sendBtnClassName: "sendDataBtn",
+    customerEmail: "",
+    costomerDesc: "",
   };
 
   render() {
-    const { software } = this.state;
+    const {
+      isSoftware,
+      isCooper,
+      isRepair,
+      isHowUse,
+      sendBtnClassName,
+    } = this.state;
 
     return (
       <div className="RS040101__screen">
-        <div className="back">
-          <div>dlkasdf</div>
-          <div>dlkasdf</div>
-          <div>dlkasdf</div>
-          <div>dlkasdf</div>
+        <div className="RS040101__screen__box rsb">
+          <div className="rsb__contain">
+            <ul>
+              <li>문의하실 내용의 주제를 선택해주세요.</li>
+              <li>정확한 선택은 빠르고 정확한 답변을 받을 수 있습니다.</li>
+            </ul>
+          </div>
 
-          <div className="textBox">
-            <div>tettet</div>
-            <div>tetete</div>
-            <div>tetete</div>
+          {/* btnArea start*/}
+          <div className="rsb__btnArea">
+            <button
+              className={
+                isSoftware ? "rsb__btnArea__selectBtn" : "rsb__btnArea__Btn"
+              }
+              onClick={() => this._softwareBtnHandler()}
+            >
+              소프트웨어 문의
+            </button>
+            <button
+              className={
+                isCooper ? "rsb__btnArea__selectBtn" : "rsb__btnArea__Btn"
+              }
+              onClick={() => this._cooperBtnHandler()}
+            >
+              개발사 협력 문의
+            </button>
+            <button
+              className={
+                isRepair ? "rsb__btnArea__selectBtn" : "rsb__btnArea__Btn"
+              }
+              onClick={() => this._repairBtnHandler()}
+            >
+              유지보수 문의
+            </button>
+            <button
+              className={
+                isHowUse ? "rsb__btnArea__selectBtn" : "rsb__btnArea__Btn"
+              }
+              onClick={() => this._howUseBtnHandler()}
+            >
+              솔루션/제품 사용 문의
+            </button>
+          </div>
+          {/* btnArea end*/}
+
+          {/* input Email */}
+          <div className="rsb__contain">
+            <ul>
+              <li>답변 받으실 이메일을 작성해주세요.</li>
+            </ul>
+          </div>
+
+          <div className="rsb__contain">
+            <input
+              type="text"
+              name="customerEmail"
+              id="customerEmail-js"
+              onChange={this._handleChangeValue}
+            />
+          </div>
+          {/* input Email */}
+
+          {/* input Content */}
+          <div className="rsb__contain">
+            <ul>
+              <li>문의 내용을 작성해주세요.</li>
+            </ul>
+          </div>
+
+          <div className="rsb__contain">
+            <input
+              className="rsb__contain__multi"
+              type="text"
+              rows="5"
+              name="costomerDesc"
+              id="costomerDesc-js"
+              onChange={this._handleChangeValue}
+            />
+          </div>
+          {/* input Content */}
+
+          <div className="rsb__contain">
+            <button
+              className={sendBtnClassName}
+              onClick={() => this._sendDataBtnHandler()}
+            >
+              문의내용 전송하기
+            </button>
           </div>
         </div>
       </div>
     );
   }
 
-  _changeSoftware = () => {
-    const { software } = this.state;
+  _handleChangeValue = (event) => {
+    let nextState = {};
+    nextState[event.target.name] = event.target.value;
+    this.setState(nextState);
+  };
+
+  _sendDataBtnHandler = () => {
+    const { customerEmail, costomerDesc } = this.state;
+
+    console.log(customerEmail, costomerDesc);
+
+    document.getElementById("customerEmail-js").value = "";
+    document.getElementById("costomerDesc-js").value = "";
 
     this.setState({
-      software: !this.state.software,
+      sendBtnClassName: "sendDataBtnClick",
+    });
+
+    setTimeout(() => {
+      this.setState({
+        sendBtnClassName: "sendDataBtn",
+      });
+    }, 1200);
+  };
+
+  _softwareBtnHandler = () => {
+    const { isSoftware } = this.state;
+
+    this.setState({
+      isSoftware: !this.state.isSoftware,
+    });
+  };
+
+  _cooperBtnHandler = () => {
+    const { isCooper } = this.state;
+
+    this.setState({
+      isCooper: !this.state.isCooper,
+    });
+  };
+
+  _repairBtnHandler = () => {
+    const { isRepair } = this.state;
+
+    this.setState({
+      isRepair: !this.state.isRepair,
+    });
+  };
+
+  _howUseBtnHandler = () => {
+    const { isHowUse } = this.state;
+
+    this.setState({
+      isHowUse: !this.state.isHowUse,
     });
   };
 }

@@ -1,3 +1,25 @@
 @charset "utf-8";
 @import "./subMenu.css";
 @import "./RS040101.css";
+
+@keyframes selectedBtn {
+  0% {
+    opacity: 0;
+    transform: rotateY(30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes unSelectedBtn {
+  0% {
+    opacity: 0;
+    transform: rotateY(40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
