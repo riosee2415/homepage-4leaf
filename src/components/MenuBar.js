@@ -109,7 +109,6 @@ class MenuBar extends React.Component {
       setTimeout(() => {
         this.setState({
           isMenuOpen: !this.state.isMenuOpen,
-
           openBarClassName: "openMenuBar",
         });
       }, 700);
