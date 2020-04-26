@@ -147,7 +147,7 @@ class RS040101 extends React.Component {
     this.setState(nextState);
   };
 
-  _sendDataBtnHandler = () => {
+  _sendDataBtnHandler = async () => {
     const {
       customerEmail,
       costomerDesc,
@@ -169,8 +169,6 @@ class RS040101 extends React.Component {
       isHowUse,
     };
 
-    console.log(sendData);
-
     this.setState({
       sendBtnClassName: "sendDataBtnClick",
       customerEmail: "",
@@ -186,6 +184,15 @@ class RS040101 extends React.Component {
         sendBtnClassName: "sendDataBtn",
       });
     }, 1200);
+
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify({ sendData }),
+    });
   };
 
   _softwareBtnHandler = () => {

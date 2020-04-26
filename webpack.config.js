@@ -39,5 +39,8 @@ module.exports = {
     contentBase: "./public",
     host: "localhost",
     port: 3030,
+    proxy: {
+      "**": "http://localhost:5000",
+    },
   },
 };

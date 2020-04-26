@@ -19,12 +19,12 @@ import {
   RS0301,
   LS0401,
   RS0401,
-  RS040101
+  RS040101,
 } from "./screens";
 
 class App extends React.Component {
   state = {
-    isMenuScreen: false
+    isMenuScreen: false,
   };
 
   render() {
@@ -82,19 +82,19 @@ class App extends React.Component {
     const { isMenuOpen } = this.state;
 
     this.setState({
-      isMenuOpen: !this.state.isMenuOpen
+      isMenuOpen: !this.state.isMenuOpen,
     });
   };
 
   _setMenuScreen = () => {
     this.setState({
-      isMenuScreen: true
+      isMenuScreen: true,
     });
   };
 
   _setMainScreen = () => {
     this.setState({
-      isMenuScreen: false
+      isMenuScreen: false,
     });
   };
 }
