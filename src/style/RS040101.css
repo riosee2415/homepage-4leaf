@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .RS040101__screen__box {
   width: 100%;
   height: 100%;
@@ -116,6 +117,21 @@
   animation: selectedBtn 0.8s forwards;
 }
 
+.rsb__btnArea .rsb__btnArea__selectBtn2 {
+  margin: 10px;
+  background: #a55eea;
+  outline: none;
+  border: none;
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 2px 2px 3px #777;
+  cursor: pointer;
+  font-weight: 600;
+  animation: selectedBtn 0.8s forwards;
+}
+
 .rsb__contain .sendDataBtn {
   margin: 5px;
   width: 90%;
@@ -141,4 +157,16 @@
   border-radius: 10px;
   padding: 5px;
   animation: selectedBtn 1.5s forwards;
+}
+
+.rsb__contain__subDesc {
+  font-style: italic;
+  border: 1px solid #fff;
+  padding: 5px;
+  opacity: 0.8;
+}
+
+.rsb__contain .pageActive {
+  color: red;
+  font-weight: 600;
 }
