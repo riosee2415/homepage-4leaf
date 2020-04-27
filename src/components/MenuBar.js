@@ -7,6 +7,7 @@ class MenuBar extends React.Component {
     openBarClassName: "openMenuBar",
     closeBarClassName: "closeMenuBar",
     menuCloseClassName: "btn btn__ani",
+    menuLink: "ma1__menu__link",
   };
 
   constructor(props) {
@@ -19,6 +20,7 @@ class MenuBar extends React.Component {
       openBarClassName,
       closeBarClassName,
       menuCloseClassName,
+      menuLink,
     } = this.state;
     return (
       <div className="ma1__menu">
@@ -36,7 +38,7 @@ class MenuBar extends React.Component {
         </div>
 
         {isMenuOpen ? (
-          <div className="ma1__menu__link" id="menu">
+          <div className={menuLink} id="menu">
             <div
               className={closeBarClassName}
               id="openMenuBar-js"
@@ -96,7 +98,6 @@ class MenuBar extends React.Component {
   _clickClose = () => {
     this.setState({
       openBarClassName: "openMenuBar",
-      menuCloseClassName: "btn btn__ani close",
     });
   };
 
@@ -104,6 +105,8 @@ class MenuBar extends React.Component {
     if (this.state.isMenuOpen) {
       this.setState({
         closeBarClassName: "closeMenuBar close",
+        menuLink: "ma1__menu__link close",
+        menuCloseClassName: "btn btn__ani close",
       });
 
       setTimeout(() => {
@@ -119,6 +122,7 @@ class MenuBar extends React.Component {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen,
       openBarClassName: "closeMenuBar",
+      menuLink: "ma1__menu__link",
       menuCloseClassName: "btn btn__ani",
     });
   };
