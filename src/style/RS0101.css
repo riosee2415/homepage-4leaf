@@ -1,3 +1,8 @@
+@import "./RS010101.css";
+@import "./RS010102.css";
+@import "./RS010103.css";
+@import "./RS010104.css";
+
 .RS0101__screen {
   width: 100%;
   height: 100%;
@@ -7,5 +12,5 @@
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(#ffffff, rgb(117, 117, 117));
+  background: linear-gradient(#fdfbfb, #ebedee);
 }

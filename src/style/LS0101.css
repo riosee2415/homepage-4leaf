@@ -11,12 +11,12 @@
 .LS0101_MainTitle {
   margin-bottom: 15px;
   text-align: center;
-  font-size: 80px;
+  font-size: 95px;
   color: black;
   text-shadow: -1px -1px 0 #faed7d, 1px -1px 0 #faed7d, -1px 1px 0 #faed7d,
     1px 1px 0 #faed7d;
   font-weight: bold;
-  line-height: 5.5rem;
+  line-height: 7.5rem;
 }
 
 .LS0101__subMenu {

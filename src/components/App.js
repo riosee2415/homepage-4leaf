@@ -9,6 +9,7 @@ import {
   RS010101,
   RS010102,
   RS010103,
+  RS010104,
   LS0201,
   LS020101,
   LS020102,
@@ -45,6 +46,7 @@ class App extends React.Component {
                   <Route exact path="/" component={LS0000} />
                   <Route exact path="/intro" component={LS0101} />
                   <Route exact path="/intro/vision" component={LS0101} />
+                  <Route exact path="/intro/history" component={LS0101} />
                   <Route exact path="/intro/organization" component={LS0101} />
                   <Route exact path="/intro/directions" component={LS0101} />
                   <Route exact path="/software" component={LS0201} />
@@ -60,8 +62,9 @@ class App extends React.Component {
                 <Route exact path="/" component={RS0000} />
                 <Route exact path="/intro" component={RS0101} />
                 <Route exact path="/intro/vision" component={RS010101} />
-                <Route exact path="/intro/organization" component={RS010102} />
-                <Route exact path="/intro/directions" component={RS010103} />
+                <Route exact path="/intro/history" component={RS010102} />
+                <Route exact path="/intro/organization" component={RS010103} />
+                <Route exact path="/intro/directions" component={RS010104} />
                 <Route exact path="/software" component={RS0201} />
                 <Route exact path="/software/product" component={RS020101} />
                 <Route exact path="/software/solution" component={RS020102} />

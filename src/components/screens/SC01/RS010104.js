@@ -3,10 +3,10 @@ import React from "react";
 class RS0101 extends React.Component {
   render() {
     return (
-      <div className="RS010102__screen">
+      <div className="RS010104__screen">
         <div>
-          <div>#연혁</div>
-          <div>4LEAF SOFTWARE 창립</div>
+          <div>#오시는 길</div>
+          <div>🚩지도를 넣을꺼에욤</div>
         </div>
       </div>
     );

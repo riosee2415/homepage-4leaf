@@ -6,6 +6,7 @@ export { default as RS0101 } from "./SC01/RS0101";
 export { default as RS010101 } from "./SC01/RS010101";
 export { default as RS010102 } from "./SC01/RS010102";
 export { default as RS010103 } from "./SC01/RS010103";
+export { default as RS010104 } from "./SC01/RS010104";
 
 export { default as LS0201 } from "./SC02/LS0201";
 export { default as LS020101 } from "./SC02/LS020101";
