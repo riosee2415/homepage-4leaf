@@ -33,6 +33,7 @@ body {
   height: 95vh;
   display: flex;
   flex-direction: row;
+  color: #fff;
 }
 
 .mainArea__main {

@@ -73,7 +73,9 @@ class App extends React.Component {
             </>
           ) : (
             <>
-              <div className="mainArea__main"></div>
+              <div className="mainArea__main">
+                <div className="main__text">4LEAF</div>
+              </div>
             </>
           )}
         </div>
