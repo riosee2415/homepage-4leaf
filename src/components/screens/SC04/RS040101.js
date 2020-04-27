@@ -50,8 +50,8 @@ class RS040101 extends React.Component {
         <div className="RS040101__screen__box rsb">
           <div className="rsb__contain">
             <ul>
-              <li>문의하실 내용의 주제를 선택해주세요.</li>
-              <li>정확한 선택은 빠르고 정확한 답변을 받을 수 있습니다.</li>
+              <li>🍀 문의하실 내용의 주제를 선택해주세요.</li>
+              <li>🍀 정확한 선택은 빠르고 정확한 답변을 받을 수 있습니다.</li>
             </ul>
           </div>
 
@@ -95,7 +95,7 @@ class RS040101 extends React.Component {
           {/* input Email */}
           <div className="rsb__contain">
             <ul>
-              <li>답변 받으실 이메일을 작성해주세요.</li>
+              <li>🍀 답변 받으실 이메일을 작성해주세요.</li>
             </ul>
           </div>
 
@@ -104,6 +104,7 @@ class RS040101 extends React.Component {
               type="text"
               name="customerEmail"
               id="customerEmail-js"
+              placeholder="4leaf@4leaf.com"
               onChange={this._handleChangeValue}
             />
           </div>
@@ -112,7 +113,7 @@ class RS040101 extends React.Component {
           {/* input Content */}
           <div className="rsb__contain">
             <ul>
-              <li>문의 내용을 작성해주세요.</li>
+              <li>🍀 문의 내용을 작성해주세요.</li>
             </ul>
           </div>
 
