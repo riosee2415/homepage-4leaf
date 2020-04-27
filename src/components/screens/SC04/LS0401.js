@@ -14,7 +14,7 @@ const menuList = [
     desc: "상세 견적을 문의하세요.",
     detailDesc:
       "개발하고싶은 소프트웨어가 있으신가요? 4LEAF이 파트너가 되어드립니다.",
-    link: "/support/online",
+    link: "/support/estimate",
   },
   {
     title: "자료실",
