@@ -10,6 +10,9 @@ class LS0101 extends React.Component {
           <br />
           SOFTWARE
         </div>
+        <div className="LS0101_des">
+          <div>* 해시태그를 클릭해주세요.</div>
+        </div>
         <div className="LS0101__subMenu">
           <div>
             <Link to="/intro/vision">#비전</Link>

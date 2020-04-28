@@ -12,5 +12,7 @@
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(#fdfbfb, #ebedee);
+  color: #000000;
+
+  background: linear-gradient(#f3e7e9, #e3eeff);
 }
