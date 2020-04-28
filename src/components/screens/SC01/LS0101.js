@@ -14,7 +14,9 @@ class LS0101 extends React.Component {
           <div>
             <Link to="/intro/vision">#비전</Link>
           </div>
-          <div>#연혁</div>
+          <div>
+            <Link to="/intro/history">#연혁</Link>
+          </div>
           <div>
             <Link to="/intro/organization">#조직도</Link>
           </div>

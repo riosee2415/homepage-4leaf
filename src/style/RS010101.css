@@ -7,9 +7,25 @@
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(#ffffff, #ffffff);
+  background: linear-gradient(#f3e7e9, #e3eeff);
 }
 
 .RS010101__content {
   text-align: center;
+}
+
+.RS010101__mainTitle {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.RS010101__firDes {
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 2.2rem;
+  font-size: 30px;
+}
+
+.RS010101__secDes {
+  line-height: 1.5rem;
 }
