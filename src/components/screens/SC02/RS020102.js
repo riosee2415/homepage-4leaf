@@ -44,6 +44,7 @@ class RS020101 extends React.Component {
           {projectList.map((project, idx) => {
             return (
               <ProjectBox
+                key={idx}
                 title={project.title}
                 desc={project.desc}
                 image={project.image}
