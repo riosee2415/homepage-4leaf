@@ -1,6 +1,9 @@
 import React from "react";
 import MenuBar from "./MenuBar";
+import { NavLink } from "react-router-dom";
 import { Route } from "react-router-dom";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
 import {
   LS0000,
   LS0101,
@@ -96,6 +99,30 @@ class App extends React.Component {
                       <use className="fill" xlinkHref="#fade-text" />
                     </g>
                   </svg>
+                </div>
+                <div className="copy">
+                  COPYRIGHT 2020 4LEAFSOFT ALL RIGHTS RESERVED
+                </div>
+                <div className="copy__right">
+                  <NavLink to="/support/online">
+                    <div
+                      className="contact"
+                      onClick={() => this._setMenuScreen()}
+                    >
+                      <span className="contactUs">문의하기</span>
+                      <span className="line"></span>
+                      <div className="contact-icon">
+                        <ContactMailIcon />
+                      </div>
+                    </div>
+                  </NavLink>
+                  <a
+                    className="insta"
+                    target="_blank"
+                    href="https://www.instagram.com/4leaf_dev/"
+                  >
+                    <InstagramIcon />
+                  </a>
                 </div>
               </div>
             </>
