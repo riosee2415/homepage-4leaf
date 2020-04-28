@@ -17,15 +17,36 @@
 
 @keyframes textAni {
   0% {
-    letter-spacing: 0.8em;
+    letter-spacing: 1em;
     opacity: 0;
   }
-  40% {
+  50% {
+    opacity: 0.2;
+  }
+  80% {
     opacity: 0.6;
   }
   100% {
     letter-spacing: normal;
     opacity: 1;
+  }
+}
+
+@keyframes faviconAni {
+  0% {
+    width: 500px;
+    height: 501px;
+    transform: rotate(-60deg) scale(1.8);
+    top: 30%;
+    left: 30%;
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translateY(-35px);
+    opacity: 0.8;
   }
 }
 
@@ -62,6 +83,20 @@ body {
   color: #fff;
 }
 
+.mainArea .favicon_ani {
+  display: block;
+  width: 27px;
+  height: 31px;
+  background-size: cover;
+  top: 0;
+  left: 10px;
+  position: absolute;
+  background-position: center center;
+  background-image: url("../assets/images/logo/favicon_logo_w.png");
+  animation: faviconAni 4s forwards;
+  transform: translateY(-35px);
+}
+
 .mainArea__main {
   width: 100%;
   height: 100%;
@@ -75,10 +110,11 @@ body {
 
 .mainArea__main .textBox .main__text {
   font-weight: bold;
+  opacity: 0;
   font-size: 200px;
   color: rgba(255, 255, 255, 0.149);
   -webkit-text-stroke: 2px #fff;
-  animation: textAni 3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation: textAni 3s 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 .mainArea__main .main__des {
@@ -98,9 +134,9 @@ body {
   stroke-width: 1px;
   stroke-dasharray: 0 250;
   stroke-opacity: 1;
-  fill: none;
-  animation: stroke_offset 5s infinite;
-  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  fill: rgba(255, 255, 255, 0.246);
+  animation: stroke_offset 6s infinite;
+  animation-timing-function: cubic-bezier(0.25, 0, 0.45, 0.94);
 }
 @keyframes stroke_offset {
   100%,
@@ -144,6 +180,7 @@ body {
   position: absolute;
   bottom: 20px;
   left: 20px;
+  animation: createAni 2s forwards;
 }
 
 .mainArea__main .copy__right {

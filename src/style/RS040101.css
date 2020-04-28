@@ -96,11 +96,11 @@
   width: 85%;
   padding: 10px;
   font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.164);
 }
 
 .rsb__btnArea .rsb__btnArea__Btn {
   height: 35px;
-  line-height: 30px;
   margin: 10px;
   background: #0b0b0b;
   outline: none;
@@ -110,11 +110,13 @@
   cursor: pointer;
   border: 1px solid rgb(255, 255, 255, 0.3);
   animation: unSelectedBtn 0.8s forwards;
+  animation: selectedBtn 0.8s forwards;
   transition: 0.6s;
   position: relative;
 }
 
-.rsb__btnArea .rsb__btnArea__Btn:before {
+.rsb__btnArea .rsb__btnArea__Btn:before,
+.rsb__btnArea .rsb__btnArea__selectBtn:before {
   content: "";
   position: absolute;
   top: 0;
@@ -124,22 +126,24 @@
   z-index: -1;
 }
 
-.rsb__btnArea .rsb__btnArea__Btn:hover::before {
+.rsb__btnArea .rsb__btnArea__Btn:hover::before,
+.rsb__btnArea .rsb__btnArea__selectBtn:hover:before {
   animation: buttonHover 0.5s forwards;
 }
 
 .rsb__btnArea .rsb__btnArea__selectBtn {
+  height: 35px;
   margin: 10px;
-  padding: 5px 8px;
-  background: #f5cd79;
+  background: rgb(255, 184, 52);
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 0px 10px 0px 10px;
   color: #fff;
   text-shadow: 2px 2px 3px #777;
   cursor: pointer;
   font-weight: 600;
   animation: selectedBtn 0.8s forwards;
+  animation: unSelectedBtn 0.8s forwards;
 }
 
 .rsb__btnArea .rsb__btnArea__selectBtn2 {
@@ -158,16 +162,22 @@
 }
 
 .rsb__contain .sendDataBtn {
+  height: 30px;
   margin: 5px;
   width: 90%;
   outline: none;
-  background: linear-gradient(#cac531, #f3f9a7);
   border: none;
   cursor: pointer;
   color: #0b0b0b;
   font-weight: 600;
   border-radius: 10px;
   padding: 5px;
+  border: 1px solid #f5cd79;
+  background: linear-gradient(#feffecc0, #f5ce79);
+}
+.rsb__contain:hover .sendDataBtn {
+  animation: contactBtn 0.3s ease-out;
+  background: linear-gradient(#f5cd79, #f3f9a7);
 }
 
 .rsb__contain .sendDataBtnClick {
