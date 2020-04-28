@@ -231,6 +231,12 @@ class RS040102 extends React.Component {
           {currentStep === 2 ? (
             <>
               <div className="rsb__contain">
+                <div>step-1</div>
+                <div className="pageActive">step-2</div>
+                <div>step-3</div>
+              </div>
+
+              <div className="rsb__contain">
                 <ul>
                   <li>🍀 원하는 작업 기간을 작성해주세요.</li>
                 </ul>
@@ -295,6 +301,12 @@ class RS040102 extends React.Component {
 
           {currentStep === 3 ? (
             <>
+              <div className="rsb__contain">
+                <div>step-1</div>
+                <div>step-2</div>
+                <div className="pageActive">step-3</div>
+              </div>
+
               <div className="rsb__guide">
                 <div className="rsb__guide__subject">
                   선택하신 문의사항 입니다.
