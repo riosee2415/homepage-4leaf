@@ -47,3 +47,8 @@
   color: #decf18;
   border-bottom: 2px solid #baae1e;
 }
+
+.RS020101__screen .category__box .category__lst li:hover,
+.RS020102__screen .category__box .category__lst li:hover {
+  color: #decf18;
+}
