@@ -10,7 +10,7 @@ class RS040102 extends React.Component {
     mobile: false,
     outsourcing: false,
     maintain: false,
-    tempraryAmount: "0원",
+    tempraryAmount: "",
     customerEmail: "",
     customerName: "",
     currentStep: 1,
@@ -21,12 +21,14 @@ class RS040102 extends React.Component {
 
     // step-2
     questionDesc: "",
+    questionTerm: "",
+    questionRequest: "",
   };
 
   _doNotnextStepAlert = () => {
     confirmAlert({
       title: "문의사항을 모두 입력하셨나요?",
-      message: "다시 확인해주세요",
+      message: "입력사항을 모두 채워주세요.",
       buttons: [
         {
           label: "확인",
@@ -44,11 +46,15 @@ class RS040102 extends React.Component {
       outsourcing,
       maintain,
       currentStep,
+      tempraryAmount,
       amountLv1,
       amountLv2,
       amountLv3,
       amountLv4,
       questionDesc,
+      questionTerm,
+      customerEmail,
+      customerName,
     } = this.state;
 
     return (
@@ -224,26 +230,26 @@ class RS040102 extends React.Component {
           {/* STEP - 2  */}
           {currentStep === 2 ? (
             <>
-              <div className="rsb__contain__checked">
-                {homepage ? (
-                  <div className="rsb__chekckedBtn">홈페이지 제작</div>
-                ) : null}
-                {groupWare ? (
-                  <div className="rsb__chekckedBtn">
-                    그룹웨어 | ERP계열 제작
-                  </div>
-                ) : null}
-                {mobile ? (
-                  <div className="rsb__chekckedBtn">
-                    모바일 어플리케이션 제작
-                  </div>
-                ) : null}
-                {outsourcing ? (
-                  <div className="rsb__chekckedBtn">외주 관련 문의</div>
-                ) : null}
-                {maintain ? (
-                  <div className="rsb__chekckedBtn">유지보수 문의</div>
-                ) : null}
+              <div className="rsb__contain">
+                <div>step-1</div>
+                <div className="pageActive">step-2</div>
+                <div>step-3</div>
+              </div>
+
+              <div className="rsb__contain">
+                <ul>
+                  <li>🍀 원하는 작업 기간을 작성해주세요.</li>
+                </ul>
+              </div>
+
+              <div className="rsb__contain">
+                <input
+                  type="text"
+                  name="questionTerm"
+                  id="questionTerm-js"
+                  onChange={this._handleChangeValue}
+                  placeholder="예) 2주"
+                />
               </div>
 
               <div className="rsb__contain">
@@ -263,6 +269,23 @@ class RS040102 extends React.Component {
                 />
               </div>
 
+              <div className="rsb__contain">
+                <ul>
+                  <li>🍀 추가 요청사항이 있으신가요?</li>
+                </ul>
+              </div>
+              <div className="rsb__contain">
+                <input
+                  className="rsb__contain__multi"
+                  type="text"
+                  rows="5"
+                  name="questionRequest"
+                  id="questionRequest-js"
+                  onChange={this._handleChangeValue}
+                  placeholder="추가 요청사항을 작성해주세요."
+                />
+              </div>
+
               <div className="rsb__containBtn">
                 <button
                   className="nextStepBtn"
@@ -275,8 +298,87 @@ class RS040102 extends React.Component {
           ) : null}
 
           {/* STEP - 3  */}
+
           {currentStep === 3 ? (
             <>
+              <div className="rsb__contain">
+                <div>step-1</div>
+                <div>step-2</div>
+                <div className="pageActive">step-3</div>
+              </div>
+
+              <div className="rsb__guide">
+                <div className="rsb__guide__subject">
+                  선택하신 문의사항 입니다.
+                </div>
+
+                {homepage ? (
+                  <>
+                    <div>홈페이지 문의</div>
+                  </>
+                ) : null}
+                {groupWare ? (
+                  <>
+                    <div>그룹웨어 | ERP 문의</div>
+                  </>
+                ) : null}
+                {mobile ? (
+                  <>
+                    <div>모바일 어플리케이션 문의</div>
+                  </>
+                ) : null}
+                {outsourcing ? (
+                  <>
+                    <div>외주 관련 문의</div>
+                  </>
+                ) : null}
+                {maintain ? (
+                  <>
+                    <div>유지보수 관련 문의</div>
+                  </>
+                ) : null}
+              </div>
+
+              <div className="rsb__guide">
+                <div className="rsb__guide__subject">
+                  선택하신 제작금액 입니다.
+                </div>
+
+                <div>{tempraryAmount}</div>
+              </div>
+
+              <div className="rsb__guide">
+                <div className="rsb__guide__subject">
+                  입력하신 이메일 주소 입니다.
+                </div>
+
+                <div>{customerEmail}</div>
+              </div>
+
+              <div className="rsb__guide">
+                <div className="rsb__guide__subject">
+                  입력하신 상호명(성명) 입니다.
+                </div>
+
+                <div>{customerName}</div>
+              </div>
+
+              <div className="rsb__guide">
+                <div className="rsb__guide__subject">
+                  요청하신 작업기간 입니다.
+                </div>
+
+                <div>{questionTerm}</div>
+              </div>
+
+              <div className="rsb__guide">
+                <div className="rsb__guide__subject">
+                  요청하신 작업내용 입니다.
+                </div>
+
+                <div>{questionDesc.substring(0, 50)}...</div>
+              </div>
+
               <div className="rsb__containBtn">
                 <button
                   className="complateStepBtn"
@@ -331,24 +433,28 @@ class RS040102 extends React.Component {
   _isAmountLv1BtnHandler = () => {
     this.setState({
       amountLv1: !this.state.amountLv1,
+      tempraryAmount: "100만원 이하",
     });
   };
 
   _isAmountLv2BtnHandler = () => {
     this.setState({
       amountLv2: !this.state.amountLv2,
+      tempraryAmount: "100만원 이상, 300만원 이하",
     });
   };
 
   _isAmountLv3BtnHandler = () => {
     this.setState({
       amountLv3: !this.state.amountLv3,
+      tempraryAmount: "300만원 이상, 500만원 이하",
     });
   };
 
   _isAmountLv4BtnHandler = () => {
     this.setState({
       amountLv4: !this.state.amountLv4,
+      tempraryAmount: "500만원 이상",
     });
   };
 
@@ -363,6 +469,8 @@ class RS040102 extends React.Component {
       tempraryAmount,
       customerEmail,
       customerName,
+      questionDesc,
+      questionTerm,
     } = this.state;
 
     if (currentStep === 1) {
@@ -375,7 +483,11 @@ class RS040102 extends React.Component {
         currentStep: 2,
       });
     } else if (currentStep === 2) {
-      console.log("3번째 화면으로 이동");
+      if (questionDesc.length < 1 || customerName.questionTerm < 1) {
+        this._doNotnextStepAlert();
+        return;
+      }
+
       this.setState({
         currentStep: 3,
       });
@@ -388,6 +500,13 @@ class RS040102 extends React.Component {
         mobile: false,
         outsourcing: false,
         maintain: false,
+        tempraryAmount: "",
+        customerEmail: "",
+        customerName: "",
+        amountLv1: false,
+        amountLv2: false,
+        amountLv3: false,
+        amountLv4: false,
       });
     }
   };
