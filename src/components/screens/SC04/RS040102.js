@@ -38,6 +38,27 @@ class RS040102 extends React.Component {
     });
   };
 
+  _confirmEmailSend = () => {
+    confirmAlert({
+      title: "문의사항을 모두 작성하셨나요? 이메일을 발송하시겠습니까?",
+      message: "발송된 이메일은 취소할 수 없습니다.",
+      buttons: [
+        {
+          label: "이메일 발송",
+          onClick: () => {
+            () => this._nextStep();
+          },
+        },
+        {
+          label: "취소",
+          onClick: () => {
+            return;
+          },
+        },
+      ],
+    });
+  };
+
   render() {
     const {
       homepage,
@@ -382,7 +403,7 @@ class RS040102 extends React.Component {
               <div className="rsb__containBtn">
                 <button
                   className="complateStepBtn"
-                  onClick={() => this._nextStep()}
+                  onClick={() => this._confirmEmailSend()}
                 >
                   작성완료
                 </button>
@@ -458,7 +479,7 @@ class RS040102 extends React.Component {
     });
   };
 
-  _nextStep = () => {
+  _nextStep = async () => {
     const {
       currentStep,
       homepage,
@@ -471,6 +492,7 @@ class RS040102 extends React.Component {
       customerName,
       questionDesc,
       questionTerm,
+      questionRequest,
     } = this.state;
 
     if (currentStep === 1) {
@@ -492,22 +514,44 @@ class RS040102 extends React.Component {
         currentStep: 3,
       });
     } else if (currentStep === 3) {
-      console.log("이메일 전송");
-      this.setState({
-        currentStep: 1,
-        homepage: false,
-        groupWare: false,
-        mobile: false,
-        outsourcing: false,
-        maintain: false,
-        tempraryAmount: "",
-        customerEmail: "",
-        customerName: "",
-        amountLv1: false,
-        amountLv2: false,
-        amountLv3: false,
-        amountLv4: false,
-      });
+      const sendData = {
+        homepage,
+        groupWare,
+        mobile,
+        outsourcing,
+        maintain,
+        tempraryAmount,
+        customerEmail,
+        customerName,
+        questionDesc,
+        questionTerm,
+        questionRequest,
+      };
+
+      const response = await fetch("/api/sendEmailEstimate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({ sendData }),
+      }).then(
+        this.setState({
+          currentStep: 1,
+          homepage: false,
+          groupWare: false,
+          mobile: false,
+          outsourcing: false,
+          maintain: false,
+          tempraryAmount: "",
+          customerEmail: "",
+          customerName: "",
+          amountLv1: false,
+          amountLv2: false,
+          amountLv3: false,
+          amountLv4: false,
+        })
+      );
     }
   };
 }
