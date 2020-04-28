@@ -39,7 +39,7 @@
 }
 .rsb__contain {
   width: 100%;
-  font-size: 11px;
+  font-size: 14px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,6 +59,7 @@
 .rsb__contain ul,
 .reb__contain input {
   padding: 5px;
+  line-height: 1.2;
 }
 
 .rsb__contain ul li,
@@ -81,7 +82,7 @@
 }
 
 .rsb__contain .rsb__contain__multi {
-  height: 200px;
+  height: 120px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   border-bottom: 1px solid #fff;
@@ -98,27 +99,41 @@
 }
 
 .rsb__btnArea .rsb__btnArea__Btn {
+  height: 35px;
+  line-height: 30px;
   margin: 10px;
-  background: none;
+  background: #0b0b0b;
   outline: none;
-  border: none;
-  width: 120px;
-  height: 25px;
-  border-radius: 5px;
+  border-radius: 10px 0px 10px 0px;
   color: #fff;
   text-shadow: 2px 2px 3px #777;
   cursor: pointer;
   border: 1px solid rgb(255, 255, 255, 0.3);
   animation: unSelectedBtn 0.8s forwards;
+  transition: 0.6s;
+  position: relative;
+}
+
+.rsb__btnArea .rsb__btnArea__Btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.rsb__btnArea .rsb__btnArea__Btn:hover::before {
+  animation: buttonHover 0.5s forwards;
 }
 
 .rsb__btnArea .rsb__btnArea__selectBtn {
   margin: 10px;
+  padding: 5px 8px;
   background: #f5cd79;
   outline: none;
   border: none;
-  width: 120px;
-  height: 25px;
   border-radius: 5px;
   color: #fff;
   text-shadow: 2px 2px 3px #777;
