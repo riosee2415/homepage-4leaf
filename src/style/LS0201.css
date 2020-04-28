@@ -1,11 +1,10 @@
 .LS0201__screen {
-  width: 100%;
-  height: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .LS020101__screen .title__box,
@@ -39,6 +38,7 @@
 .LS020102__screen .category__box .category__lst li {
   padding: 0 22px 18px;
   font-size: 13px;
+  font-weight: 600;
   border-bottom: 1px solid #828282;
   cursor: pointer;
 }

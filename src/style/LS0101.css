@@ -9,21 +9,29 @@
 }
 
 .LS0101_MainTitle {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 95px;
+  font-size: 110px;
   color: black;
   text-shadow: -1px -1px 0 #faed7d, 1px -1px 0 #faed7d, -1px 1px 0 #faed7d,
     1px 1px 0 #faed7d;
   font-weight: bold;
-  line-height: 7.5rem;
+  line-height: 8.5rem;
+}
+
+.LS0101_des {
+  margin-bottom: 25px;
+  font-size: 13px;
 }
 
 .LS0101__subMenu {
   width: 50%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
+  font-size: 20px;
 }
 
 .LS0101__subMenu div a {

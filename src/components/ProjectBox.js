@@ -5,7 +5,7 @@ class ProjectBox extends React.Component {
     return (
       <div className="project__box">
         <div className="project__img">
-          <img src={this.props.loadImg} alt="프로젝트 사진" />
+          <img src={this.props.image} alt="프로젝트 사진" />
         </div>
         <div className="project__txt">
           <h2 className="project-title">{this.props.title}</h2>

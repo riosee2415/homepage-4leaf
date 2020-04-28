@@ -4,9 +4,14 @@ class RS0101 extends React.Component {
   render() {
     return (
       <div className="RS010102__screen">
-        <div>
-          <div>#연혁</div>
-          <div>4LEAF SOFTWARE 창립</div>
+        <div className="RS010102__content">
+          <div className="RS010102__mainTitle">#연혁</div>
+          <div>
+            <ul className="RS010102__des">
+              <li className="RS010102__year">🍀2020</li>
+              <li>4LEAF SOFTWARE 창립</li>
+            </ul>
+          </div>
         </div>
       </div>
     );

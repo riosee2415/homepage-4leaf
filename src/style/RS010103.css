@@ -7,5 +7,26 @@
   align-items: center;
   justify-content: center;
 
+  color: #000000;
+
   background: linear-gradient(#f3e7e9, #e3eeff);
+}
+
+.RS010103__content {
+  text-align: center;
+}
+
+.RS010103__mainTitle {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.organization__image {
+  width: 500px;
+  height: 500px;
+
+  background-image: url("../assets/images/organization/organization.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
