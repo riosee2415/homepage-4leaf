@@ -46,6 +46,16 @@
   justify-content: flex-start;
 }
 
+.rsb__contain__checked {
+  width: 100%;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: red;
+}
+
 .rsb__contain ul,
 .reb__contain input {
   padding: 5px;
@@ -169,4 +179,24 @@
 .rsb__contain .pageActive {
   color: red;
   font-weight: 600;
+}
+
+.rsb__containBtn .nextStepBtn,
+.rsb__containBtn .complateStepBtn {
+  width: 70px;
+  height: 20px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(#bdc3c7, #2c3e50);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.rsb__containBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

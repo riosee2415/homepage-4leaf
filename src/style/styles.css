@@ -7,9 +7,6 @@
 @import "./LS0000.css";
 @import "./LS0101.css";
 @import "./RS0101.css";
-@import "./RS010101.css";
-@import "./RS010102.css";
-@import "./RS010103.css";
 @import "./LS0201.css";
 @import "./LS020101.css";
 @import "./LS020102.css";
@@ -20,12 +17,40 @@
 @import "./LS0401.css";
 @import "./RS0401.css";
 
+@keyframes textAni {
+  0% {
+    letter-spacing: 0.8em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+*::selection {
+  background-color: #fff;
+  color: #2d3436;
+}
+
 body {
-  display: block;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
   overflow-x: hidden;
   background-size: cover;
+  background-position: center center;
   background-image: url("../assets/images/backImg/background.jpg");
 }
 
@@ -34,18 +59,83 @@ body {
   height: 95vh;
   display: flex;
   flex-direction: row;
+  position: relative;
   color: #fff;
 }
 
 .mainArea__main {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: relative;
+}
+
+.mainArea__main .textBox .main__text {
+  font-size: 200px;
+  color: rgba(255, 255, 255, 0.02);
+  -webkit-text-stroke: 2px #fff;
+  animation: textAni 3s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.mainArea__main .main__des {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.mainArea__main .main__des svg {
+  width: 100%;
+  height: 150px;
+  font-size: 20px;
+  letter-spacing: 8px;
+}
+
+.mainArea__main .main__des .stroke {
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-dasharray: 0 250;
+  stroke-opacity: 1;
+  fill: none;
+  animation: stroke_offset 5s infinite;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes stroke_offset {
+  100%,
+  25% {
+    stroke-dasharray: 0 250;
+    stroke-opacity: 1;
+  }
+  50%,
+  75% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0.75;
+  }
+  55%,
+  70% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0;
+  }
+}
+.mainArea__main .main__des .fill {
+  fill: rgb(255, 184, 52);
+  fill-opacity: 0;
+  animation: fill_offset 5s infinite;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes fill_offset {
+  100%,
+  25%,
+  35%,
+  90% {
+    fill-opacity: 0;
+  }
+  50%,
+  70% {
+    fill-opacity: 1;
+  }
 }
 
 .mainArea__col-1 {
@@ -132,11 +222,5 @@ body {
     font-weight: 600;
     font-size: 11px;
     margin-top: 20px;
-  }
-
-  .ma1__menu {
-    position: absolute;
-    margin-right: 20px;
-    right: 0;
   }
 }
