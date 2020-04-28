@@ -1,12 +1,11 @@
 import React from "react";
-import imageSample from "../assets/images/project_sample.png";
 
 class ProjectBox extends React.Component {
   render() {
     return (
       <div className="project__box">
         <div className="project__img">
-          <img src={imageSample} alt="프로젝트 사진" />
+          <img src={this.props.loadImg} alt="프로젝트 사진" />
         </div>
         <div className="project__txt">
           <h2 className="project-title">{this.props.title}</h2>

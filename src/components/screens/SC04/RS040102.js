@@ -10,12 +10,17 @@ class RS040102 extends React.Component {
     mobile: false,
     outsourcing: false,
     maintain: false,
-    tempraryAmount: "",
+    tempraryAmount: "0원",
     customerEmail: "",
     customerName: "",
     currentStep: 1,
+    amountLv1: false,
+    amountLv2: false,
+    amountLv3: false,
+    amountLv4: false,
 
     // step-2
+    questionDesc: "",
   };
 
   _doNotnextStepAlert = () => {
@@ -39,6 +44,11 @@ class RS040102 extends React.Component {
       outsourcing,
       maintain,
       currentStep,
+      amountLv1,
+      amountLv2,
+      amountLv3,
+      amountLv4,
+      questionDesc,
     } = this.state;
 
     return (
@@ -130,14 +140,42 @@ class RS040102 extends React.Component {
                 </ul>
               </div>
 
-              <div className="rsb__contain">
-                <input
-                  type="text"
-                  name="tempraryAmount"
-                  id="tempraryAmount-js"
-                  onChange={this._handleChangeValue}
-                  placeholder="300만원"
-                />
+              <div className="rsb__btnArea">
+                <button
+                  className={
+                    amountLv1 ? "rsb__btnArea__selectBtn2" : "rsb__btnArea__Btn"
+                  }
+                  onClick={() => this._isAmountLv1BtnHandler()}
+                >
+                  100만원 이하
+                </button>
+
+                <button
+                  className={
+                    amountLv2 ? "rsb__btnArea__selectBtn2" : "rsb__btnArea__Btn"
+                  }
+                  onClick={() => this._isAmountLv2BtnHandler()}
+                >
+                  100만원 ~ 300만원
+                </button>
+
+                <button
+                  className={
+                    amountLv3 ? "rsb__btnArea__selectBtn2" : "rsb__btnArea__Btn"
+                  }
+                  onClick={() => this._isAmountLv3BtnHandler()}
+                >
+                  300만원 ~ 500만원
+                </button>
+
+                <button
+                  className={
+                    amountLv4 ? "rsb__btnArea__selectBtn2" : "rsb__btnArea__Btn"
+                  }
+                  onClick={() => this._isAmountLv4BtnHandler()}
+                >
+                  500만원 이상
+                </button>
               </div>
 
               <div className="rsb__contain">
@@ -186,6 +224,45 @@ class RS040102 extends React.Component {
           {/* STEP - 2  */}
           {currentStep === 2 ? (
             <>
+              <div className="rsb__contain__checked">
+                {homepage ? (
+                  <div className="rsb__chekckedBtn">홈페이지 제작</div>
+                ) : null}
+                {groupWare ? (
+                  <div className="rsb__chekckedBtn">
+                    그룹웨어 | ERP계열 제작
+                  </div>
+                ) : null}
+                {mobile ? (
+                  <div className="rsb__chekckedBtn">
+                    모바일 어플리케이션 제작
+                  </div>
+                ) : null}
+                {outsourcing ? (
+                  <div className="rsb__chekckedBtn">외주 관련 문의</div>
+                ) : null}
+                {maintain ? (
+                  <div className="rsb__chekckedBtn">유지보수 문의</div>
+                ) : null}
+              </div>
+
+              <div className="rsb__contain">
+                <ul>
+                  <li>🍀 문의 내용을 작성해주세요.</li>
+                </ul>
+              </div>
+              <div className="rsb__contain">
+                <input
+                  className="rsb__contain__multi"
+                  type="text"
+                  rows="5"
+                  name="questionDesc"
+                  id="questionDesc-js"
+                  onChange={this._handleChangeValue}
+                  placeholder="문의내용을 작성해주세요."
+                />
+              </div>
+
               <div className="rsb__containBtn">
                 <button
                   className="nextStepBtn"
@@ -251,6 +328,30 @@ class RS040102 extends React.Component {
     });
   };
 
+  _isAmountLv1BtnHandler = () => {
+    this.setState({
+      amountLv1: !this.state.amountLv1,
+    });
+  };
+
+  _isAmountLv2BtnHandler = () => {
+    this.setState({
+      amountLv2: !this.state.amountLv2,
+    });
+  };
+
+  _isAmountLv3BtnHandler = () => {
+    this.setState({
+      amountLv3: !this.state.amountLv3,
+    });
+  };
+
+  _isAmountLv4BtnHandler = () => {
+    this.setState({
+      amountLv4: !this.state.amountLv4,
+    });
+  };
+
   _nextStep = () => {
     const {
       currentStep,
@@ -265,11 +366,7 @@ class RS040102 extends React.Component {
     } = this.state;
 
     if (currentStep === 1) {
-      if (
-        tempraryAmount.length < 1 ||
-        customerEmail.length < 1 ||
-        customerName.length < 1
-      ) {
+      if (customerEmail.length < 1 || customerName.length < 1) {
         this._doNotnextStepAlert();
         return;
       }
@@ -286,6 +383,11 @@ class RS040102 extends React.Component {
       console.log("이메일 전송");
       this.setState({
         currentStep: 1,
+        homepage: false,
+        groupWare: false,
+        mobile: false,
+        outsourcing: false,
+        maintain: false,
       });
     }
   };

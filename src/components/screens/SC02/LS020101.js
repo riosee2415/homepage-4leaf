@@ -1,25 +1,31 @@
 import React from "react";
 import ProjectBox from "../../ProjectBox";
 
-const projectList = [
-  {
-    title: "4LEAF MANAGEMENT SYSTEM",
-    desc: "사내 전산관리 시스템",
-    image: "../assets/images/project_sample.png"
-  },
-  {
-    title: "4LEAF MANAGEMENT SYSTEM",
-    desc: "사내 전산관리 시스템",
-    image: "../assets/images/project_sample.png"
-  },
-  {
-    title: "4LEAF MANAGEMENT SYSTEM",
-    desc: "사내 전산관리 시스템",
-    image: "../assets/images/project_sample.png"
-  }
-];
+let projectList = [];
 
 class LS020101 extends React.Component {
+  constructor(props) {
+    super(props);
+
+    projectList = [
+      {
+        title: "4LEAF MANAGEMENT SYSTEM",
+        desc: "사내 전산관리 시스템",
+        image: "111",
+      },
+      {
+        title: "4LEAF MANAGEMENT SYSTEM",
+        desc: "사내 전산관리 시스템",
+        image: "111",
+      },
+      {
+        title: "4LEAF MANAGEMENT SYSTEM",
+        desc: "사내 전산관리 시스템",
+        image: "111",
+      },
+    ];
+  }
+
   render() {
     return (
       <div className="LS020101__screen">
@@ -42,7 +48,7 @@ class LS020101 extends React.Component {
               <ProjectBox
                 title={project.title}
                 desc={project.desc}
-                image={project.image}
+                loadImg={project.image}
               />
             );
           })}

@@ -1,22 +1,21 @@
 import React from "react";
 import ProjectBox from "../../ProjectBox";
-import projectImage01 from "../../../assets/images/project_sample.png";
 
 const projectList = [
   {
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: projectImage01
+    image: "../assets/images/project_sample.png"
   },
   {
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: projectImage01
+    image: "../assets/images/project_sample.png"
   },
   {
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: projectImage01
+    image: "../assets/images/project_sample.png"
   }
 ];
 
