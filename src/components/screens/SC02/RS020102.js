@@ -34,7 +34,7 @@ class RS020101 extends React.Component {
         </div>
         <div className="category__box">
           <ul className="category__lst">
-            <li class="active">전체</li>
+            <li className="active">전체</li>
             <li>WEB</li>
             <li>MOBILE</li>
           </ul>
