@@ -5,7 +5,7 @@
   align-content: space-between;
   margin-top: 25px;
   width: 100%;
-  height: 420px;
+  height: 480px;
 }
 
 .project__box {
@@ -13,14 +13,14 @@
   width: 30%;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #716868;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 3px 3px 7px rgba(167, 167, 167, 0.7);
   cursor: pointer;
 }
 
 .project__box .project__img {
   width: 100%;
-  height: 130px;
+  height: 165px;
   background: #dedede;
 }
 
