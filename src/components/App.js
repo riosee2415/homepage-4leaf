@@ -23,6 +23,7 @@ import {
   RS0401,
   RS040101,
   RS040102,
+  RS040103,
 } from "./screens";
 
 class App extends React.Component {
@@ -58,6 +59,7 @@ class App extends React.Component {
                   <Route exact path="/support" component={LS0401} />
                   <Route exact path="/support/online" component={LS0401} />
                   <Route exact path="/support/estimate" component={LS0401} />
+                  <Route exact path="/support/docs" component={LS0401} />
                 </div>
               </div>
               <div className="mainArea__col-2">
@@ -74,6 +76,7 @@ class App extends React.Component {
                 <Route exact path="/support" component={RS0401} />
                 <Route exact path="/support/online" component={RS040101} />
                 <Route exact path="/support/estimate" component={RS040102} />
+                <Route exact path="/support/docs" component={RS040103} />
               </div>
             </>
           ) : (
