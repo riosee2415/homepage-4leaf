@@ -46,7 +46,7 @@ class RS040102 extends React.Component {
         {
           label: "이메일 발송",
           onClick: () => {
-            () => this._nextStep();
+            this._nextStep();
           },
         },
         {
