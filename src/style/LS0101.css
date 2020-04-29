@@ -38,3 +38,7 @@
   color: #fff;
   text-decoration: none;
 }
+
+.ls0101__active span {
+  color: red;
+}

@@ -17,12 +17,15 @@
 }
 
 .RS010104__mainTitle {
-  margin-bottom: 15px;
   font-weight: bold;
+
+  margin-bottom: 15px;
 }
 
 .businessAddress {
-  width: 500px;
-  height: 500px;
-  background-color: #efefef;
+  width: 600px;
+  height: 600px;
+
+  border-radius: 30px;
+  margin-bottom: 20px;
 }
