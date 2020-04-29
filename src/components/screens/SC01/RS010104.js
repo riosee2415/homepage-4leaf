@@ -15,7 +15,7 @@ class RS010104 extends React.Component {
         let container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
         let options = {
           //지도를 생성할 때 필요한 기본 옵션
-          center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+          center: new kakao.maps.LatLng(36.351046, 127.371009), //지도의 중심좌표.
           level: 3, //지도의 레벨(확대, 축소 정도)
         };
 
@@ -29,10 +29,8 @@ class RS010104 extends React.Component {
       <div className="RS010104__screen">
         <div className="RS010104__content">
           <div className="RS010104__mainTitle">#오시는 길</div>
-          <div id="map" className="businessAddress">
-            🚩지도를 넣을꺼에욤
-          </div>
-          호출해야하는 것을 feetch로 받아서 불러오기
+          <div id="map" className="businessAddress"></div>
+          호출해야하는 것을 fetch로 받아서 불러오기
         </div>
       </div>
     );
