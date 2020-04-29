@@ -1,14 +1,15 @@
 import React from "react";
+import imageURL from "../../../assets/images/organization/organization.png";
 
-class RS0101 extends React.Component {
+class RS010103 extends React.Component {
   state = {
-    imgURL: "",
+    imgURL: this.props.imageURL,
     isLoading: false,
   };
 
   componentDidMount = async () => {
     await this.setState({
-      imgURL: "../../assets/ddafsd/asdfasdf",
+      imgURL: imageURL,
       isLoading: true,
     });
   };
@@ -22,8 +23,7 @@ class RS0101 extends React.Component {
           <div className="RS010103__mainTitle">#조직도</div>
           {isLoading ? (
             <>
-              <div className="organization__image"></div>
-              <img src={imgURL} alt="조직도" />
+              <img className="organization__image" src="" alt="조직도" />
             </>
           ) : (
             <div>이미지 로딩 중...</div>
@@ -34,4 +34,4 @@ class RS0101 extends React.Component {
   }
 }
 
-export default RS0101;
+export default RS010103;

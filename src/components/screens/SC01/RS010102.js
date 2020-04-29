@@ -1,6 +1,6 @@
 import React from "react";
 
-class RS0101 extends React.Component {
+class RS010102 extends React.Component {
   render() {
     return (
       <div className="RS010102__screen">
@@ -18,4 +18,4 @@ class RS0101 extends React.Component {
   }
 }
 
-export default RS0101;
+export default RS010102;

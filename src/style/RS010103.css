@@ -24,9 +24,4 @@
 .organization__image {
   width: 500px;
   height: 500px;
-
-  background-image: url("../assets/images/organization/organization.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }

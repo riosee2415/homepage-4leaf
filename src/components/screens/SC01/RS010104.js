@@ -1,7 +1,7 @@
 /*global kakao*/
 import React from "react";
 
-class RS0101 extends React.Component {
+class RS010104 extends React.Component {
   componentDidMount() {
     console.log("Hello");
     const script = document.createElement("script");
@@ -39,4 +39,4 @@ class RS0101 extends React.Component {
   }
 }
 
-export default RS0101;
+export default RS010104;
