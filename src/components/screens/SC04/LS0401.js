@@ -21,7 +21,7 @@ const menuList = [
     desc: "필요한 자료들이 있습니다.",
     detailDesc:
       "사용 메뉴얼, 템플릿 오픈소스 등 4LEAF의 다양한 자료들을 활용하세요.",
-    link: "/support/online",
+    link: "/support/docs",
   },
 ];
 
