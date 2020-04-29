@@ -20,3 +20,9 @@
   margin-bottom: 15px;
   font-weight: bold;
 }
+
+.businessAddress {
+  width: 500px;
+  height: 500px;
+  background-color: #efefef;
+}

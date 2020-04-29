@@ -7,7 +7,6 @@ class RS0101 extends React.Component {
         <div className="RS010103__content">
           <div className="RS010103__mainTitle">#조직도</div>
           <div className="organization__image"></div>
-          호출해야하는 것을 feetch로 받아서 불러오기
         </div>
       </div>
     );
