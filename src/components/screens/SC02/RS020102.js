@@ -9,16 +9,19 @@ class RS020101 extends React.Component {
 
     projectList = [
       {
+        category: "WEB",
         title: "4LEAF MANAGEMENT SYSTEM",
         desc: "사내 전산관리 시스템",
         image: "111"
       },
       {
+        category: "WEB",
         title: "4LEAF MANAGEMENT SYSTEM",
         desc: "사내 전산관리 시스템",
         image: "111"
       },
       {
+        category: "WEB",
         title: "4LEAF MANAGEMENT SYSTEM",
         desc: "사내 전산관리 시스템",
         image: "111"
@@ -45,6 +48,7 @@ class RS020101 extends React.Component {
             return (
               <ProjectBox
                 key={idx}
+                category={project.category}
                 title={project.title}
                 desc={project.desc}
                 image={project.image}
