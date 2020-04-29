@@ -60,13 +60,13 @@
 .reb__contain input {
   padding: 5px;
   line-height: 1.2;
+  width: 85%;
 }
 
 .rsb__contain ul li,
 .rsb__contain input {
   margin: 5px;
   align-items: flex-start;
-  color: #fff;
 }
 
 .rsb__contain input {
@@ -79,6 +79,7 @@
   font-size: 11px;
   border-radius: 10px;
   margin-bottom: 50px;
+  color: #fff;
 }
 
 .rsb__contain .rsb__contain__multi {
@@ -147,18 +148,18 @@
 }
 
 .rsb__btnArea .rsb__btnArea__selectBtn2 {
+  height: 35px;
   margin: 10px;
-  background: #a55eea;
+  background: #a29bfe;
   outline: none;
   border: none;
-  width: 120px;
-  height: 25px;
-  border-radius: 5px;
+  border-radius: 0px 10px 0px 10px;
   color: #fff;
   text-shadow: 2px 2px 3px #777;
   cursor: pointer;
   font-weight: 600;
   animation: selectedBtn 0.8s forwards;
+  animation: unSelectedBtn 0.8s forwards;
 }
 
 .rsb__contain .sendDataBtn {
@@ -195,20 +196,113 @@
 
 .rsb__contain__subDesc {
   font-style: italic;
-  border: 1px solid #fff;
-  padding: 5px;
+  border: 0.2px solid rgb(226, 226, 226);
+  padding: 6px;
   opacity: 0.8;
+  width: 100%;
+  color: #aae7f5;
+}
+
+.rsb__contain.step-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .rsb__contain .pageActive {
-  color: red;
+  color: #fff;
   font-weight: 600;
+  background-color: rgb(255, 184, 52);
+}
+
+.rsb__contain .step {
+  font-size: 13px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  animation: stepActice 1s forwards;
+}
+
+.rsb__contain.step-box .step:nth-child(1)::before {
+  content: "기본정보";
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  left: 10px;
+  animation: stepDes 0.5s forwards;
+}
+
+.rsb__contain.step-box .step.pageActive:nth-child(1)::before {
+  content: "기본정보";
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  left: 10px;
+  animation: stepDes 0.5s forwards;
+  color: rgb(255, 184, 52);
+}
+
+.rsb__contain.step-box .step:nth-child(3)::before {
+  content: "내용작성";
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  left: 46%;
+  animation: stepDes 0.5s 0.5s forwards;
+}
+
+.rsb__contain.step-box .step.pageActive:nth-child(3)::before {
+  content: "기본정보";
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  left: 46%;
+  animation: stepDes 0.5s 0.5s forwards;
+  color: rgb(255, 184, 52);
+}
+
+.rsb__contain.step-box .step:nth-child(5)::before {
+  content: "문의전송";
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  right: 10px;
+  animation: stepDes 0.5s 1s forwards;
+}
+
+.rsb__contain.step-box .step.pageActive:nth-child(5)::before {
+  content: "기본정보";
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  right: 10px;
+  animation: stepDes 0.5s 1s forwards;
+  color: rgb(255, 184, 52);
+}
+
+.rsb__contain .step-line {
+  width: 110px;
+  height: 3px;
+  background-color: #fff;
 }
 
 .rsb__containBtn .nextStepBtn,
 .rsb__containBtn .complateStepBtn {
   width: 70px;
-  height: 20px;
+  height: 30px;
+  line-height: 30px;
   color: #fff;
   outline: none;
   border: none;
@@ -216,6 +310,13 @@
   background: linear-gradient(#bdc3c7, #2c3e50);
   border-radius: 10px;
   font-weight: 600;
+  border: 1px solid #fff;
+  transition: 0.5s;
+}
+
+.rsb__containBtn .nextStepBtn:hover,
+.rsb__containBtn .complateStepBtn:hover {
+  box-shadow: 0px 6px 0px #4c555f;
 }
 
 .rsb__containBtn {

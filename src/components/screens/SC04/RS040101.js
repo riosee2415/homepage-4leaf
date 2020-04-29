@@ -118,7 +118,7 @@ class RS040101 extends React.Component {
           </div>
 
           <div className="rsb__contain">
-            <input
+            <textarea
               className="rsb__contain__multi"
               type="text"
               rows="5"

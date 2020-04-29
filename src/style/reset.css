@@ -131,3 +131,14 @@ a {
   text-decoration: none;
   color: #fff;
 }
+textarea {
+  outline: none;
+}
+button {
+  outline: none;
+  border: none;
+}
+input {
+  outline: none;
+  border: none;
+}
