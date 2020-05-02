@@ -7,6 +7,7 @@ class RS010102 extends React.Component {
         <div className="RS010102__content">
           <div className="RS010102__mainTitle">#연혁</div>
           <div>
+            <div className="bar"></div>
             <ul className="RS010102__des">
               <li className="RS010102__year">🍀2020</li>
               <li>4LEAF SOFTWARE 창립</li>

@@ -7,7 +7,10 @@ class RS010101 extends React.Component {
         <div className="RS010101__content">
           <div className="RS010101__mainTitle">#비전</div>
           <div className="RS010101__firDes">
-            한번 더 눈이가는, <br /> 계속 보고싶은 결과물로 보여드리겠습니다.
+            <div className="clover">🍀</div>
+            <div>
+              한번 더 눈이가는, <br /> 계속 보고싶은 결과물로 보여드리겠습니다.
+            </div>
           </div>
           <div className="RS010101__secDes">
             <div>
@@ -15,11 +18,12 @@ class RS010101 extends React.Component {
               <br />
               그래서 찾고나면 보물을 찾은 것 같은 기쁨은 느끼게 됩니다. <br />
               그렇듯 저희 4LEAF 역시 수많은 IT회사들 사이에서 숨겨진 네잎
-              클로버같은 회사입니다.
+              클로버같은 회사가 되고자 합니다.
             </div>
             <div>
               고객과 풍부한 소통, 끈끈한 연결을 통하여 <br />
-              생산성 증가와 더 나은 결과물을 창출하는 것에 초점을 두고 있습니다.
+              생산성 증가와 고객님에게 꼭 맞춘 결과물을 창출하는 것에 초점을
+              두고 있습니다.
             </div>
             <div>
               이러한 신념을 가지고 <br />

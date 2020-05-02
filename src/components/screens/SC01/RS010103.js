@@ -1,5 +1,5 @@
 import React from "react";
-import imageURL from "../../../assets/images/organization/organization.png";
+import imageURL from "../../../assets/images/0101_images/organization.png";
 
 class RS010103 extends React.Component {
   state = {

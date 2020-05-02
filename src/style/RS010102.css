@@ -21,10 +21,18 @@
   font-weight: bold;
 }
 
+.bar {
+  width: 2px;
+  height: 50px;
+  background-color: green;
+}
+
 .RS010102__des {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  text-align: left;
 }
 
 .RS010102__year {

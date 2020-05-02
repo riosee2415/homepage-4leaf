@@ -19,7 +19,7 @@ class LS0101 extends React.Component {
               to="/intro/vision"
               activeStyle={{
                 fontWeight: "bold",
-                color: "blue",
+                color: "#faed7d",
               }}
             >
               <span>#비전</span>
@@ -30,7 +30,7 @@ class LS0101 extends React.Component {
               to="/intro/history"
               activeStyle={{
                 fontWeight: "bold",
-                color: "blue",
+                color: "#faed7d",
               }}
             >
               #연혁
@@ -41,7 +41,7 @@ class LS0101 extends React.Component {
               to="/intro/organization"
               activeStyle={{
                 fontWeight: "bold",
-                color: "blue",
+                color: "#faed7d",
               }}
             >
               #조직도
@@ -52,7 +52,7 @@ class LS0101 extends React.Component {
               to="/intro/directions"
               activeStyle={{
                 fontWeight: "bold",
-                color: "blue",
+                color: "#faed7d",
               }}
             >
               #오시는 길
