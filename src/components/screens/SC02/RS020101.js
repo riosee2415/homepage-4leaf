@@ -1,53 +1,60 @@
 import React from "react";
 import ProjectBox from "../../ProjectBox";
 
-let projectList = [];
+const categoryList = ["전체", "홈페이지", "모바일 앱", "그룹웨어", "ERP"];
+
+const projectList = [
+  {
+    category: "그룹웨어",
+    title: "4LEAF MANAGEMENT SYSTEM",
+    desc: "사내 전산관리 시스템",
+    image: "111"
+  },
+  {
+    category: "그룹웨어",
+    title: "4LEAF MANAGEMENT SYSTEM",
+    desc: "사내 전산관리 시스템",
+    image: "111"
+  },
+  {
+    category: "그룹웨어",
+    title: "4LEAF MANAGEMENT SYSTEM",
+    desc: "사내 전산관리 시스템",
+    image: "111"
+  },
+  {
+    category: "그룹웨어",
+    title: "4LEAF MANAGEMENT SYSTEM",
+    desc: "사내 전산관리 시스템",
+    image: "111"
+  },
+  {
+    category: "그룹웨어",
+    title: "4LEAF MANAGEMENT SYSTEM",
+    desc: "사내 전산관리 시스템",
+    image: "111"
+  },
+  {
+    category: "그룹웨어",
+    title: "4LEAF MANAGEMENT SYSTEM",
+    desc: "사내 전산관리 시스템",
+    image: "111"
+  }
+];
 
 class RS020101 extends React.Component {
   constructor(props) {
     super(props);
 
-    projectList = [
-      {
-        category: "그룹웨어",
-        title: "4LEAF MANAGEMENT SYSTEM",
-        desc: "사내 전산관리 시스템",
-        image: "111"
-      },
-      {
-        category: "그룹웨어",
-        title: "4LEAF MANAGEMENT SYSTEM",
-        desc: "사내 전산관리 시스템",
-        image: "111"
-      },
-      {
-        category: "그룹웨어",
-        title: "4LEAF MANAGEMENT SYSTEM",
-        desc: "사내 전산관리 시스템",
-        image: "111"
-      },
-      {
-        category: "그룹웨어",
-        title: "4LEAF MANAGEMENT SYSTEM",
-        desc: "사내 전산관리 시스템",
-        image: "111"
-      },
-      {
-        category: "그룹웨어",
-        title: "4LEAF MANAGEMENT SYSTEM",
-        desc: "사내 전산관리 시스템",
-        image: "111"
-      },
-      {
-        category: "그룹웨어",
-        title: "4LEAF MANAGEMENT SYSTEM",
-        desc: "사내 전산관리 시스템",
-        image: "111"
-      }
-    ];
+    this.state = {
+      selectedCategory: 0,
+      selectedList: projectList
+    };
   }
 
   render() {
+    const { selectedCategory, selectedList } = this.state;
+
     return (
       <div className="RS020101__screen">
         <div className="title__box">
@@ -55,30 +62,59 @@ class RS020101 extends React.Component {
         </div>
         <div className="category__box">
           <ul className="category__lst">
-            <li className="active">전체</li>
-            <li>홈페이지</li>
-            <li>모바일 앱</li>
-            <li>그룹웨어</li>
-            <li>ERP</li>
+            {categoryList.map((category, idx) => {
+              return (
+                <li
+                  className={selectedCategory == idx ? "active" : null}
+                  onClick={() => this._categoryClickHandler(idx)}
+                >
+                  {category}
+                </li>
+              );
+            })}
           </ul>
         </div>
 
-        <div className="project__wrap">
-          {projectList.map((project, idx) => {
-            return (
-              <ProjectBox
-                key={idx}
-                category={project.category}
-                title={project.title}
-                desc={project.desc}
-                image={project.image}
-              />
-            );
-          })}
-        </div>
+        {selectedList.length > 0 ? (
+          <div className="project__wrap">
+            {selectedList.map((project, idx) => {
+              return (
+                <ProjectBox
+                  key={idx}
+                  category={project.category}
+                  title={project.title}
+                  desc={project.desc}
+                  image={project.image}
+                  clickHandler={() => this._projectClickHandler(idx)}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <div className="empty__box">해당하는 제품이 없습니다.</div>
+        )}
       </div>
     );
   }
+
+  _categoryClickHandler = idx => {
+    const category = categoryList[idx];
+    let selectedList = [];
+
+    if (category === "전체") {
+      selectedList = projectList;
+    } else {
+      projectList.map(project => {
+        if (project.category === category) selectedList.push(project);
+      });
+    }
+    this.setState({
+      selectedCategory: idx,
+      selectedList: selectedList
+    });
+  };
+
+  _projectClickHandler = idx => {};
 }
 
 export default RS020101;

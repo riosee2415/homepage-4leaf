@@ -84,10 +84,12 @@ class RS040102 extends React.Component {
           {/* STEP - 1  */}
           {currentStep === 1 ? (
             <>
-              <div className="rsb__contain">
-                <div className="pageActive">step-1</div>
-                <div>step-2</div>
-                <div>step-3</div>
+              <div className="rsb__contain step-box">
+                <div className="step pageActive">step-1</div>
+                <div className="step-line"></div>
+                <div className="step">step-2</div>
+                <div className="step-line"></div>
+                <div className="step">step-3</div>
               </div>
 
               <div className="rsb__contain">
@@ -251,10 +253,12 @@ class RS040102 extends React.Component {
           {/* STEP - 2  */}
           {currentStep === 2 ? (
             <>
-              <div className="rsb__contain">
-                <div>step-1</div>
-                <div className="pageActive">step-2</div>
-                <div>step-3</div>
+              <div className="rsb__contain step-box">
+                <div className="step">step-1</div>
+                <div className="step-line"></div>
+                <div className="step pageActive">step-2</div>
+                <div className="step-line"></div>
+                <div className="step">step-3</div>
               </div>
 
               <div className="rsb__contain">
@@ -279,7 +283,7 @@ class RS040102 extends React.Component {
                 </ul>
               </div>
               <div className="rsb__contain">
-                <input
+                <textarea
                   className="rsb__contain__multi"
                   type="text"
                   rows="5"
@@ -296,7 +300,7 @@ class RS040102 extends React.Component {
                 </ul>
               </div>
               <div className="rsb__contain">
-                <input
+                <textarea
                   className="rsb__contain__multi"
                   type="text"
                   rows="5"
@@ -322,10 +326,12 @@ class RS040102 extends React.Component {
 
           {currentStep === 3 ? (
             <>
-              <div className="rsb__contain">
-                <div>step-1</div>
-                <div>step-2</div>
-                <div className="pageActive">step-3</div>
+              <div className="rsb__contain step-box">
+                <div className="step">step-1</div>
+                <div className="step-line"></div>
+                <div className="step">step-2</div>
+                <div className="step-line"></div>
+                <div className="step pageActive">step-3</div>
               </div>
 
               <div className="rsb__guide">

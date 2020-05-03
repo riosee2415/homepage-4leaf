@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class LS0101 extends React.Component {
   render() {
@@ -15,16 +15,48 @@ class LS0101 extends React.Component {
         </div>
         <div className="LS0101__subMenu">
           <div>
-            <Link to="/intro/vision">#비전</Link>
+            <NavLink
+              to="/intro/vision"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "#faed7d",
+              }}
+            >
+              <span>#비전</span>
+            </NavLink>
           </div>
           <div>
-            <Link to="/intro/history">#연혁</Link>
+            <NavLink
+              to="/intro/history"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "#faed7d",
+              }}
+            >
+              #연혁
+            </NavLink>
           </div>
           <div>
-            <Link to="/intro/organization">#조직도</Link>
+            <NavLink
+              to="/intro/organization"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "#faed7d",
+              }}
+            >
+              #조직도
+            </NavLink>
           </div>
           <div>
-            <Link to="/intro/directions">#오시는 길</Link>
+            <NavLink
+              to="/intro/directions"
+              activeStyle={{
+                fontWeight: "bold",
+                color: "#faed7d",
+              }}
+            >
+              #오시는 길
+            </NavLink>
           </div>
         </div>
       </div>

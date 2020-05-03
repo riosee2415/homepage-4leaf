@@ -13,6 +13,9 @@
   justify-content: center;
 
   color: #000000;
+}
 
-  background: linear-gradient(#f3e7e9, #e3eeff);
+.RS0101__MainTitle {
+  font-size: 100px;
+  text-align: center;
 }

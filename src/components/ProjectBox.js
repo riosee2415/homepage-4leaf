@@ -3,7 +3,7 @@ import React from "react";
 class ProjectBox extends React.Component {
   render() {
     return (
-      <div className="project__box">
+      <div className="project__box" onClick={this.props.clickHandler}>
         <div className="project__img">
           <img src={this.props.image} alt="프로젝트 사진" />
         </div>

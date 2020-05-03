@@ -93,7 +93,7 @@ body {
   position: absolute;
   background-position: center center;
   background-image: url("../assets/images/logo/favicon_logo_w.png");
-  animation: faviconAni 4s forwards;
+  animation: faviconAni 3.5s forwards;
   transform: translateY(-35px);
 }
 
@@ -103,9 +103,14 @@ body {
   background: linear-gradient(#000000db, #131313e5);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
+}
+
+.mainArea__main .mainArea__textBox {
+  margin-left: 100px;
+  margin-bottom: 150px;
 }
 
 .mainArea__main .textBox .main__text {
@@ -114,7 +119,7 @@ body {
   font-size: 200px;
   color: rgba(255, 255, 255, 0.149);
   -webkit-text-stroke: 2px #fff;
-  animation: textAni 3s 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation: textAni 3s 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 .mainArea__main .main__des {
@@ -134,7 +139,7 @@ body {
   stroke-width: 1px;
   stroke-dasharray: 0 250;
   stroke-opacity: 1;
-  fill: rgba(255, 255, 255, 0.246);
+  fill: none;
   animation: stroke_offset 6s infinite;
   animation-timing-function: cubic-bezier(0.25, 0, 0.45, 0.94);
 }
@@ -225,7 +230,7 @@ body {
 
 .mainArea__col-1 {
   width: 50%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -237,7 +242,7 @@ body {
 .mainArea__col-2 {
   width: 50%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .mainArea__col-1 .ma1__topBox {

@@ -83,24 +83,26 @@ class App extends React.Component {
             <>
               <div className="mainArea__main">
                 <div className="favicon_ani"></div>
-                <div className="textBox">
-                  <div className="main__text">4LEAF</div>
-                </div>
-                <div className="main__des">
-                  <svg>
-                    <symbol id="fade-text">
-                      <text x="50%" y="35%" textAnchor="middle">
-                        한번 더 눈이가는,
-                      </text>
-                      <text x="50%" y="60%" textAnchor="middle">
-                        계속 보고싶은 결과물로 보여드리겠습니다.
-                      </text>
-                    </symbol>
-                    <g>
-                      <use className="stroke" xlinkHref="#fade-text" />
-                      <use className="fill" xlinkHref="#fade-text" />
-                    </g>
-                  </svg>
+                <div className="mainArea__textBox">
+                  <div className="textBox">
+                    <div className="main__text">4LEAF</div>
+                  </div>
+                  <div className="main__des">
+                    <svg>
+                      <symbol id="fade-text">
+                        <text x="23%" y="35%" textAnchor="middle">
+                          한번 더 눈이가는,
+                        </text>
+                        <text x="50%" y="60%" textAnchor="middle">
+                          계속 보고싶은 결과물로 보여드리겠습니다.
+                        </text>
+                      </symbol>
+                      <g>
+                        <use className="stroke" xlinkHref="#fade-text" />
+                        <use className="fill" xlinkHref="#fade-text" />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
                 <div className="copy">
                   COPYRIGHT 2020 4LEAFSOFT ALL RIGHTS RESERVED
