@@ -136,6 +136,7 @@ class RS020101 extends React.Component {
     const { perPage } = this.state;
 
     this.setState({
+      currentPage: 1,
       selectedCategory: idx,
       selectedCategoryList: selectedCategoryList,
       selectedPageList: selectedCategoryList.slice(0, perPage)

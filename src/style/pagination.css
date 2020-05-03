@@ -1,0 +1,26 @@
+.pagination {
+  margin: 20px 0 10px;
+}
+
+.pagination ul {
+  display: flex;
+}
+
+.pagination ul li {
+  margin: 0 4px;
+  padding: 10px 15px 11px;
+  color: #272727;
+  background: #fff;
+  border: 1px solid #b5b5b5;
+  border-radius: 2px;
+  cursor: pointer;
+  text-shadow: 1px 1.5px 2px rgba(51, 50, 50, 0.8);
+  box-shadow: 1px 1px 1px rgba(220, 220, 220, 0.5);
+}
+
+.pagination ul li.active {
+  font-weight: bold;
+  color: #fff;
+  background: #d5c61c;
+  border: 1px solid #9e9a09;
+}
