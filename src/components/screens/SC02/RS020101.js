@@ -9,37 +9,43 @@ const projectList = [
     category: "그룹웨어",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: "111"
+    image: "111",
+    link: "http://www.naver.com"
   },
   {
     category: "모바일 앱",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: "111"
+    image: "111",
+    link: "http://www.naver.com"
   },
   {
     category: "그룹웨어",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: "111"
+    image: "111",
+    link: "http://www.naver.com"
   },
   {
     category: "모바일 앱",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: "111"
+    image: "111",
+    link: "http://www.naver.com"
   },
   {
     category: "ERP",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: "111"
+    image: "111",
+    link: "http://www.naver.com"
   },
   {
     category: "그룹웨어",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
-    image: "111"
+    image: "111",
+    link: "http://www.naver.com"
   }
 ];
 
@@ -96,7 +102,7 @@ class RS020101 extends React.Component {
                     title={project.title}
                     desc={project.desc}
                     image={project.image}
-                    clickHandler={() => this._projectClickHandler(idx)}
+                    link={project.link}
                   />
                 );
               })}
@@ -142,8 +148,6 @@ class RS020101 extends React.Component {
       selectedPageList: selectedCategoryList.slice(0, perPage)
     });
   };
-
-  _projectClickHandler = idx => {};
 }
 
 export default RS020101;
