@@ -1,0 +1,19 @@
+.RS040103__screen {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.RS040103__screen__box {
+  width: 100%;
+  height: 100%;
+  animation: createRight 1s forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
