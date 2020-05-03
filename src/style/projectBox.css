@@ -1,7 +1,7 @@
 .project__wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-content: space-between;
   margin-top: 25px;
   width: 100%;
@@ -10,6 +10,7 @@
 
 .project__box {
   overflow: hidden;
+  margin: 0 10px;
   width: 30%;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #716868;

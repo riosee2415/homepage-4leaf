@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectBox from "../../ProjectBox";
+import Pagination from "../../Pagination";
 
 const categoryList = ["전체", "홈페이지", "모바일 앱", "그룹웨어", "ERP"];
 
@@ -11,7 +12,7 @@ const projectList = [
     image: "111"
   },
   {
-    category: "그룹웨어",
+    category: "모바일 앱",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111"
@@ -23,13 +24,13 @@ const projectList = [
     image: "111"
   },
   {
-    category: "그룹웨어",
+    category: "모바일 앱",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111"
   },
   {
-    category: "그룹웨어",
+    category: "ERP",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111"
@@ -47,13 +48,22 @@ class RS020101 extends React.Component {
     super(props);
 
     this.state = {
+      currentPage: 1,
+      perPage: 6,
       selectedCategory: 0,
-      selectedList: projectList
+      selectedCategoryList: projectList,
+      selectedPageList: projectList.slice(0, 6)
     };
   }
 
   render() {
-    const { selectedCategory, selectedList } = this.state;
+    const {
+      selectedCategory,
+      selectedCategoryList,
+      selectedPageList,
+      currentPage,
+      perPage
+    } = this.state;
 
     return (
       <div className="RS020101__screen">
@@ -75,21 +85,35 @@ class RS020101 extends React.Component {
           </ul>
         </div>
 
-        {selectedList.length > 0 ? (
-          <div className="project__wrap">
-            {selectedList.map((project, idx) => {
-              return (
-                <ProjectBox
-                  key={idx}
-                  category={project.category}
-                  title={project.title}
-                  desc={project.desc}
-                  image={project.image}
-                  clickHandler={() => this._projectClickHandler(idx)}
-                />
-              );
-            })}
-          </div>
+        {selectedPageList.length > 0 ? (
+          <>
+            <div className="project__wrap">
+              {selectedPageList.map((project, idx) => {
+                return (
+                  <ProjectBox
+                    key={idx}
+                    category={project.category}
+                    title={project.title}
+                    desc={project.desc}
+                    image={project.image}
+                    clickHandler={() => this._projectClickHandler(idx)}
+                  />
+                );
+              })}
+            </div>
+
+            <Pagination
+              data={selectedCategoryList}
+              currentPage={currentPage}
+              perPage={perPage}
+              clickHandler={(selectedPageList, currentPage) => {
+                this.setState({
+                  selectedPageList: selectedPageList,
+                  currentPage: currentPage
+                });
+              }}
+            />
+          </>
         ) : (
           <div className="empty__box">해당하는 제품이 없습니다.</div>
         )}
@@ -99,18 +123,22 @@ class RS020101 extends React.Component {
 
   _categoryClickHandler = idx => {
     const category = categoryList[idx];
-    let selectedList = [];
+    let selectedCategoryList = [];
 
     if (category === "전체") {
-      selectedList = projectList;
+      selectedCategoryList = projectList;
     } else {
       projectList.map(project => {
-        if (project.category === category) selectedList.push(project);
+        if (project.category === category) selectedCategoryList.push(project);
       });
     }
+
+    const { perPage } = this.state;
+
     this.setState({
       selectedCategory: idx,
-      selectedList: selectedList
+      selectedCategoryList: selectedCategoryList,
+      selectedPageList: selectedCategoryList.slice(0, perPage)
     });
   };
 
