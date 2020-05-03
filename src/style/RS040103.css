@@ -17,3 +17,10 @@
   align-items: flex-start;
   justify-content: center;
 }
+
+.selectedPage {
+  color: red;
+}
+.noneSelectedPage {
+  color: #fff;
+}

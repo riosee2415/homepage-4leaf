@@ -1,7 +1,9 @@
 "use strict";
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+// const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+
+console.log(path.resolve());
 
 module.exports = {
   entry: {
@@ -35,7 +37,7 @@ module.exports = {
         from: "*.*",
       },
     ]),
-    new FaviconsWebpackPlugin("/path/to/logo.png"), // svg works too!
+    // new FaviconsWebpackPlugin("../public/favicon.ico"),
   ],
   devServer: {
     contentBase: "./public",
