@@ -34,8 +34,8 @@ class RS040103 extends React.Component {
             </ul>
           </div>
 
-          <div className="rsb__contain">
-            <table className="docsTable">
+          <div className="rsb__contain-table">
+            <table className="docsTable-head">
               <thead>
                 <tr>
                   <th>NO</th>
@@ -45,8 +45,72 @@ class RS040103 extends React.Component {
                   <th>조회수</th>
                 </tr>
               </thead>
-
+            </table>
+            <table className="docsTable-body">
               <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>DUMMYDUMMYDUMMYDUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                  <td>DUMMY</td>
+                </tr>
                 <tr>
                   <td>1</td>
                   <td>DUMMYDUMMYDUMMYDUMMY</td>
