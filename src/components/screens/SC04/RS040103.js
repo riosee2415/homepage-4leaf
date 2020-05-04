@@ -17,8 +17,6 @@ class RS040103 extends React.Component {
     this.setState({
       totalPages: tempArr,
     });
-
-    console.log(this.state.totalPages);
   };
 
   render() {
