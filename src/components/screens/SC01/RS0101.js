@@ -5,7 +5,7 @@ class RS0101 extends React.Component {
     return (
       <div className="RS0101__screen">
         <div className="RS0101__MainTitle">
-          ABOUT <br /> 4LEAF
+          INTRODUCE <br /> 4LEAF
         </div>
       </div>
     );
