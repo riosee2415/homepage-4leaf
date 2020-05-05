@@ -4,7 +4,9 @@ class RS0101 extends React.Component {
   render() {
     return (
       <div className="RS0101__screen">
-        <div className="RS0101__MainTitle">🍀</div>
+        <div className="RS0101__MainTitle">
+          ABOUT <br /> 4LEAF
+        </div>
       </div>
     );
   }
