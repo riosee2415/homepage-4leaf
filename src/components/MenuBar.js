@@ -48,7 +48,10 @@ class MenuBar extends React.Component {
               <span className="line2"></span>
               <span className="line"></span>
             </div>
-            <div className="menu__link__list">
+            <div
+              className="menu__link__list"
+              onClick={() => this._visibleMenu()}
+            >
               <div
                 className={menuCloseClassName}
                 onClick={() => this.props.setMenuFunc()}
