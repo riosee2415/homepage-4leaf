@@ -71,3 +71,23 @@
     border: 3px solid #fff;
   }
 }
+
+.RS0401__screen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.rs__sub__mainTitle {
+  text-align: center;
+  font-size: 110px;
+  color: black;
+  text-shadow: -1px -1px 0 #faed7d, 1px -1px 0 #faed7d, -1px 1px 0 #faed7d,
+    1px 1px 0 #faed7d;
+  font-weight: bold;
+  line-height: 13.5rem;
+  animation: createRight 1s forwards;
+}
