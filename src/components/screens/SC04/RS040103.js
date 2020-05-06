@@ -33,7 +33,7 @@ class RS040103 extends React.Component {
           </div>
 
           <div className="rsb__contain-table">
-            <table className="docsTable-head">
+            <table className="docsTable">
               <thead>
                 <tr>
                   <th>NO</th>
@@ -43,8 +43,7 @@ class RS040103 extends React.Component {
                   <th>조회수</th>
                 </tr>
               </thead>
-            </table>
-            <table className="docsTable-body">
+
               <tbody>
                 <tr>
                   <td>1</td>
@@ -135,18 +134,22 @@ class RS040103 extends React.Component {
           </div>
 
           <div className="rsb__contain">
-            {totalPages.map((page, idx) => {
-              return (
-                <div
-                  key={idx}
-                  className={
-                    page === currentPage ? "selectedPage" : "noneSelectedPage"
-                  }
-                >
-                  {page}
-                </div>
-              );
-            })}
+            <div className="pagenation">
+              <div className="page-pre">-</div>
+              {totalPages.map((page, idx) => {
+                return (
+                  <div
+                    key={idx}
+                    className={
+                      page === currentPage ? "selectedPage" : "noneSelectedPage"
+                    }
+                  >
+                    {page}
+                  </div>
+                );
+              })}
+              <div className="page-next">+</div>
+            </div>
           </div>
         </div>
       </div>
