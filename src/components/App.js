@@ -25,6 +25,7 @@ import {
   RS040102,
   RS040103,
 } from "./screens";
+import sampleImg from "../assets/images/project_sample.png";
 
 class App extends React.Component {
   state = {

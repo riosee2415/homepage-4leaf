@@ -10,43 +10,43 @@ const projectList = [
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111",
-    link: "http://www.naver.com"
+    link: "http://www.naver.com",
   },
   {
     category: "모바일 앱",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111",
-    link: "http://www.naver.com"
+    link: "http://www.naver.com",
   },
   {
     category: "그룹웨어",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111",
-    link: "http://www.naver.com"
+    link: "http://www.naver.com",
   },
   {
     category: "모바일 앱",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111",
-    link: "http://www.naver.com"
+    link: "http://www.naver.com",
   },
   {
     category: "ERP",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111",
-    link: "http://www.naver.com"
+    link: "http://www.naver.com",
   },
   {
     category: "그룹웨어",
     title: "4LEAF MANAGEMENT SYSTEM",
     desc: "사내 전산관리 시스템",
     image: "111",
-    link: "http://www.naver.com"
-  }
+    link: "http://www.naver.com",
+  },
 ];
 
 class RS020101 extends React.Component {
@@ -58,7 +58,7 @@ class RS020101 extends React.Component {
       perPage: 6,
       selectedCategory: 0,
       selectedCategoryList: projectList,
-      selectedPageList: projectList.slice(0, 6)
+      selectedPageList: projectList.slice(0, 6),
     };
   }
 
@@ -68,7 +68,7 @@ class RS020101 extends React.Component {
       selectedCategoryList,
       selectedPageList,
       currentPage,
-      perPage
+      perPage,
     } = this.state;
 
     return (
@@ -115,7 +115,7 @@ class RS020101 extends React.Component {
               clickHandler={(selectedPageList, currentPage) => {
                 this.setState({
                   selectedPageList: selectedPageList,
-                  currentPage: currentPage
+                  currentPage: currentPage,
                 });
               }}
             />
@@ -127,14 +127,14 @@ class RS020101 extends React.Component {
     );
   }
 
-  _categoryClickHandler = idx => {
+  _categoryClickHandler = (idx) => {
     const category = categoryList[idx];
     let selectedCategoryList = [];
 
     if (category === "전체") {
       selectedCategoryList = projectList;
     } else {
-      projectList.map(project => {
+      projectList.map((project) => {
         if (project.category === category) selectedCategoryList.push(project);
       });
     }
@@ -145,7 +145,7 @@ class RS020101 extends React.Component {
       currentPage: 1,
       selectedCategory: idx,
       selectedCategoryList: selectedCategoryList,
-      selectedPageList: selectedCategoryList.slice(0, perPage)
+      selectedPageList: selectedCategoryList.slice(0, perPage),
     });
   };
 }
