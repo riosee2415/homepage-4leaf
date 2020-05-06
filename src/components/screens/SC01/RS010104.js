@@ -32,8 +32,10 @@ class RS010104 extends React.Component {
       <div className="RS010104__screen">
         <div className="RS010104__content">
           <div className="RS010104__mainTitle">#오시는 길</div>
-          <div id="map" className="businessAddress"></div>
-          <div>🚩대전광역시 서구 계룡로394번길 14-14</div>
+          <div className="mapWrap">
+            <div id="map" className="businessAddress"></div>
+            <div>🚩대전광역시 서구 계룡로394번길 14-14</div>
+          </div>
         </div>
       </div>
     );
