@@ -26,14 +26,15 @@
 }
 
 .ma1__menu__link {
-  animation: menuLink 0.3s forwards;
+  animation: menuLink 0.1s forwards;
 }
 
 .ma1__menu__link.close {
   animation: menuLinkClose 0.5s forwards;
 }
 
-.ma1__menu__link div {
+.ma1__menu__link .menu div {
+  width: 150px;
   font-size: 18px;
   margin: 20px;
   cursor: pointer;
@@ -56,7 +57,7 @@
   width: 0;
   height: 0;
   background-color: currentColor;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .ma1__menu__link div.btn__ani:after {
@@ -72,20 +73,20 @@
   height: 2px;
 }
 
-.ma1__menu__link div.btn__ani:hover:before,
-.ma1__menu__link div.btn__ani:hover:after {
+.ma1__menu__link .menu:hover div.btn__ani:before,
+.ma1__menu__link .menu:hover div.btn__ani:after {
   width: 100%;
 }
 
-.ma1__menu__link div .en {
+.ma1__menu__link .menu div .en {
   position: absolute;
   left: 0;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s;
   font-size: 13px;
 }
 
-.ma1__menu__link div a:hover .en {
+.ma1__menu__link .menu:hover .en {
   transform: translateX(140px);
   opacity: 1;
 }
@@ -103,29 +104,37 @@
   animation: 0.5s opacity forwards;
 }
 
-.menu__link__list div:nth-child(1) {
-  animation: menuOpen 1.2s forwards;
-}
-.menu__link__list div:nth-child(2) {
-  animation: menuOpen 0.9s forwards;
-}
-.menu__link__list div:nth-child(3) {
-  animation: menuOpen 0.6s forwards;
-}
-.menu__link__list div:nth-child(4) {
-  animation: menuOpen 0.3s forwards;
+.menu__link__list .menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu__link__list div.close:nth-child(1) {
+.menu__link__list .menu div:nth-child(1) {
+  animation: menuOpen 0.8s forwards;
+}
+.menu__link__list .menu div:nth-child(2) {
+  animation: menuOpen 0.6s forwards;
+}
+.menu__link__list .menu div:nth-child(3) {
+  animation: menuOpen 0.4s forwards;
+}
+.menu__link__list .menu div:nth-child(4) {
+  animation: menuOpen 0.2s forwards;
+}
+
+.menu__link__list .menu div.close:nth-child(1) {
   animation: menuClose 0.25s forwards;
 }
-.menu__link__list div.close:nth-child(2) {
+.menu__link__list .menu div.close:nth-child(2) {
   animation: menuClose 0.5s forwards;
 }
-.menu__link__list div.close:nth-child(3) {
+.menu__link__list .menu div.close:nth-child(3) {
   animation: menuClose 0.75s forwards;
 }
-.menu__link__list div.close:nth-child(4) {
+.menu__link__list .menu div.close:nth-child(4) {
   animation: menuClose 1s forwards;
 }
 

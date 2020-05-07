@@ -52,41 +52,49 @@ class MenuBar extends React.Component {
               className="menu__link__list"
               onClick={() => this._visibleMenu()}
             >
-              <div
-                className={menuCloseClassName}
-                onClick={() => this.props.setMenuFunc()}
-              >
-                <NavLink to="/intro">
-                  <span className="ko">회사소개</span>
-                  <span className="en">Introduce</span>
-                </NavLink>
+              <div className="menu">
+                <div
+                  className={menuCloseClassName}
+                  onClick={() => this.props.setMenuFunc()}
+                >
+                  <NavLink to="/intro">
+                    <span className="ko">회사소개</span>
+                    <span className="en">Introduce</span>
+                  </NavLink>
+                </div>
               </div>
-              <div
-                className={menuCloseClassName}
-                onClick={() => this.props.setMenuFunc()}
-              >
-                <NavLink to="/software">
-                  <span className="ko">소프트웨어</span>
-                  <span className="en">Software</span>
-                </NavLink>
-              </div>
-              <div
-                className={menuCloseClassName}
-                onClick={() => this.props.setMenuFunc()}
-              >
-                <NavLink to="/community">
-                  <span className="ko">커뮤니티</span>
-                  <span className="en">Community</span>
-                </NavLink>
-              </div>
-              <div
-                className={menuCloseClassName}
-                onClick={() => this.props.setMenuFunc()}
-              >
-                <NavLink to="/support">
-                  <span className="ko">고객지원</span>
-                  <span className="en">Support</span>
-                </NavLink>
+              <div className="menu">
+                <div
+                  className={menuCloseClassName}
+                  onClick={() => this.props.setMenuFunc()}
+                >
+                  <NavLink to="/software">
+                    <span className="ko">소프트웨어</span>
+                    <span className="en">Software</span>
+                  </NavLink>
+                </div>
+              </div>{" "}
+              <div className="menu">
+                <div
+                  className={menuCloseClassName}
+                  onClick={() => this.props.setMenuFunc()}
+                >
+                  <NavLink to="/community">
+                    <span className="ko">커뮤니티</span>
+                    <span className="en">Community</span>
+                  </NavLink>
+                </div>
+              </div>{" "}
+              <div className="menu">
+                <div
+                  className={menuCloseClassName}
+                  onClick={() => this.props.setMenuFunc()}
+                >
+                  <NavLink to="/support">
+                    <span className="ko">고객지원</span>
+                    <span className="en">Support</span>
+                  </NavLink>
+                </div>
               </div>
             </div>
           </div>

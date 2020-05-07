@@ -1,9 +1,12 @@
 import React from "react";
+import SearchIcon from "@material-ui/icons/Search";
 
 class RS040103 extends React.Component {
   state = {
     totalPages: [],
     currentPage: 1,
+    searchBtn: "search-btn",
+    isSearchText: false,
   };
 
   componentDidMount = async () => {
@@ -20,7 +23,7 @@ class RS040103 extends React.Component {
   };
 
   render() {
-    const { totalPages, currentPage } = this.state;
+    const { totalPages, currentPage, searchBtn, isSearchText } = this.state;
 
     return (
       <div className="RS040103__screen">
@@ -31,7 +34,16 @@ class RS040103 extends React.Component {
               <li>🍀 필요한 자료를 무료로 다운받아 사용하세요.</li>
             </ul>
           </div>
-
+          <div className="table-search">
+            <input
+              type="text"
+              placeholder="제목으로 검색하세요"
+              className={isSearchText ? "search-text click" : "search-text"}
+            />
+            <div className={searchBtn} onClick={() => this._ClickSearch()}>
+              <SearchIcon />
+            </div>
+          </div>
           <div className="rsb__contain-table">
             <table className="docsTable">
               <thead>
@@ -155,6 +167,11 @@ class RS040103 extends React.Component {
       </div>
     );
   }
+  _ClickSearch = () => {
+    this.setState({
+      isSearchText: !this.state.isSearchText,
+    });
+  };
 }
 
 export default RS040103;
