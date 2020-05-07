@@ -34,6 +34,7 @@
   box-sizing: border-box;
   transform: translateX(35px);
   transition: 0.5s;
+  background-color: rgb(221, 221, 221);
 }
 
 .RS040103__screen__box .table-search .search-text:focus {
