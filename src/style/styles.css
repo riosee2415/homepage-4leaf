@@ -302,10 +302,18 @@ body {
     flex-direction: column;
   }
 
+  .ma1__menu {
+    padding: 0;
+  }
+
+  .mainArea .favicon_ani {
+    top: 4px;
+  }
+
   .mainArea__col-1 {
     width: 100%;
-    background: linear-gradient(#2d3436, #636e72);
-    height: 50%;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100%;
 
     display: flex;
     flex-direction: row;
@@ -313,8 +321,8 @@ body {
 
   .mainArea__col-2 {
     width: 100%;
-    background: linear-gradient(#747d8c, #dfe6e9);
-    height: 50%;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100%;
   }
 
   .mainArea__col-1 .ma1__topBox {
@@ -327,5 +335,23 @@ body {
     font-weight: 600;
     font-size: 11px;
     margin-top: 20px;
+  }
+
+  .mainArea__main .mainArea__textBox {
+    margin-left: 30px;
+  }
+
+  .mainArea__main .textBox .main__text {
+    font-weight: bold;
+    opacity: 0;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.149);
+    -webkit-text-stroke: 2px #fff;
+    animation: textAni 3s 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  }
+
+  .mainArea__main .main__des svg {
+    font-size: 14px;
+    letter-spacing: 1px;
   }
 }
