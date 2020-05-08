@@ -1,5 +1,6 @@
 import React from "react";
 import SubMenu from "../../SubMenu";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const menuList = [
   {
@@ -40,6 +41,9 @@ class LS0401 extends React.Component {
             />
           );
         })}
+        <div className="pageScroll">
+          <ExpandMoreIcon className="pageScroll__icon" />
+        </div>
       </div>
     );
   }
