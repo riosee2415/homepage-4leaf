@@ -1,6 +1,7 @@
 "use strict";
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 // const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 console.log(path.resolve());
@@ -37,14 +38,15 @@ module.exports = {
         from: "*.*",
       },
     ]),
+    new Dotenv(),
     // new FaviconsWebpackPlugin("../public/favicon.ico"),
   ],
   devServer: {
     contentBase: "./public",
     host: "localhost",
-    port: 3030,
+    port: process.env.PORT,
     proxy: {
-      "**": "http://localhost:5000",
+      "**": process.env.PORT,
     },
   },
 };

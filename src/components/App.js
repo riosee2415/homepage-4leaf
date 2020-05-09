@@ -25,7 +25,6 @@ import {
   RS040102,
   RS040103,
 } from "./screens";
-import sampleImg from "../assets/images/project_sample.png";
 
 class App extends React.Component {
   state = {
@@ -34,6 +33,11 @@ class App extends React.Component {
 
   render() {
     const { isMenuScreen } = this.state;
+
+    console.log("sadfsdafasdfad");
+    console.log("sadfsdafasdfad");
+    console.log("sadfsdafasdfad");
+    console.log("sadfsdafasdfad");
 
     return (
       <>

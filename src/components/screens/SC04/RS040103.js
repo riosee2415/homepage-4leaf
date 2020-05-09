@@ -12,6 +12,10 @@ class RS040103 extends React.Component {
   };
 
   componentDidMount = async () => {
+    console.log(process.env.ADMIN_CODE);
+    console.log(process.env.ADMIN_CODE);
+    console.log(process.env.ADMIN_CODE);
+
     const dataPage = 1;
     let tempArr = [];
 
