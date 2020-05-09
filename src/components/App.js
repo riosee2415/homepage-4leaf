@@ -34,11 +34,6 @@ class App extends React.Component {
   render() {
     const { isMenuScreen } = this.state;
 
-    console.log("sadfsdafasdfad");
-    console.log("sadfsdafasdfad");
-    console.log("sadfsdafasdfad");
-    console.log("sadfsdafasdfad");
-
     return (
       <>
         <div className="background"></div>
