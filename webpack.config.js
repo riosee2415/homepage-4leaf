@@ -44,7 +44,7 @@ module.exports = {
   devServer: {
     contentBase: "./public",
     host: "localhost",
-    port: process.env.PORT,
+    port: 3030,
     proxy: {
       "**": process.env.PORT,
     },
