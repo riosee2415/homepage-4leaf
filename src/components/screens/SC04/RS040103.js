@@ -6,11 +6,13 @@ class RS040103 extends React.Component {
     totalPages: [],
     currentPage: 1,
     searchBtn: "search-btn",
+    isLoading: false,
     isSearchText: false,
+    datas: [],
   };
 
   componentDidMount = async () => {
-    const dataPage = 5;
+    const dataPage = 1;
     let tempArr = [];
 
     for (let i = 1; i <= dataPage; i++) {
@@ -23,7 +25,13 @@ class RS040103 extends React.Component {
   };
 
   render() {
-    const { totalPages, currentPage, searchBtn, isSearchText } = this.state;
+    const {
+      totalPages,
+      currentPage,
+      searchBtn,
+      isSearchText,
+      isLoading,
+    } = this.state;
 
     return (
       <div className="RS040103__screen">
@@ -57,90 +65,98 @@ class RS040103 extends React.Component {
               </thead>
 
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>DUMMYDUMMYDUMMYDUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                  <td>DUMMY</td>
-                </tr>
+                {isLoading ? (
+                  <>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>DUMMYDUMMYDUMMYDUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                      <td>DUMMY</td>
+                    </tr>
+                  </>
+                ) : (
+                  <tr>
+                    <td colSpan="5">조회된 데이터가 없습니다.</td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
@@ -167,6 +183,13 @@ class RS040103 extends React.Component {
       </div>
     );
   }
+
+  _getData = async () => {
+    this.setState({
+      isLoading: true,
+    });
+  };
+
   _ClickSearch = () => {
     this.setState({
       isSearchText: !this.state.isSearchText,
