@@ -4127,7 +4127,21 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
-dotenv@^6.1.0:
+dotenv-defaults@^1.0.2:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/dotenv-defaults/-/dotenv-defaults-1.1.1.tgz#032c024f4b5906d9990eb06d722dc74cc60ec1bd"
+  integrity sha512-6fPRo9o/3MxKvmRZBD3oNFdxODdhJtIy1zcJeUSCs6HCy4tarUpd+G67UTU9tF6OWXeSPqsm4fPAB+2eY9Rt9Q==
+  dependencies:
+    dotenv "^6.2.0"
+
+dotenv-webpack@^1.7.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/dotenv-webpack/-/dotenv-webpack-1.8.0.tgz#7ca79cef2497dd4079d43e81e0796bc9d0f68a5e"
+  integrity sha512-o8pq6NLBehtrqA8Jv8jFQNtG9nhRtVqmoD4yWbgUyoU3+9WBlPe+c2EAiaJok9RB28QvrWvdWLZGeTT5aATDMg==
+  dependencies:
+    dotenv-defaults "^1.0.2"
+
+dotenv@^6.1.0, dotenv@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
@@ -10557,9 +10571,9 @@ write-file-atomic@^3.0.0:
     typedarray-to-buffer "^3.1.5"
 
 ws@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.1.tgz#442fdf0a47ed64f59b6a5d8ff130f4748ed524fb"
-  integrity sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.2.tgz#dd5cdbd57a9979916097652d78f1cc5faea0c32e"
+  integrity sha512-zmhltoSR8u1cnDsD43TX59mzoMZsLKqUweyYBAIvTngR3shc0W6aOZylZmq/7hqyVxPdi+5Ud2QInblgyE72fw==
   dependencies:
     async-limiter "~1.0.0"
 
